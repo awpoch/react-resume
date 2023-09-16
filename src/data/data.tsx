@@ -113,11 +113,11 @@ export const aboutData: About = {
 };
 
 /**
- * Vidoe section
+ * Video section
  */
 export const videoData: Video = {
   imageSrc: videoImage,
-  description: `Video description`,
+  description: `Video of my Bass Skills`,
 };
 
 /**

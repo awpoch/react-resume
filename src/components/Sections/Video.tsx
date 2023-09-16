@@ -22,15 +22,15 @@ const Hero: FC = memo(() => {
   return (
     <Section noPadding sectionId={SectionId.Video}>
       <div className=
-        {classNames('flex w-full items-center justify-center bg-cover bg-center px-4 py-16 md:py-24 lg:px-8', 
+        {classNames('flex w-full items-center justify-center bg-cover bg-center px-4 py-8 md:py-12 lg:px-8', 
         parallaxEnabled && 'bg-fixed',
         {'bg-neutral-700': !imageSrc},
         )}
         style={imageSrc ? {backgroundImage: `url(${resolveSrc}`} : undefined}>
-            {description}
+            <div style={{color: 'white', fontSize: '50', fontWeight: 'bold'}}>{description}</div>
       </div>
       <div className=
-        {classNames('flex w-full items-center justify-center bg-cover bg-center px-4 py-16 md:py-24 lg:px-8', 
+        {classNames('flex w-full items-center justify-center bg-cover bg-center px-4 lg:px-8', 
         parallaxEnabled && 'bg-fixed',
         {'bg-neutral-700': !imageSrc},
         )}
