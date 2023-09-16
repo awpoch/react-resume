@@ -50,6 +50,14 @@ export interface AboutItem {
 }
 
 /**
+ * Video section
+ */
+export interface Video {
+  imageSrc?: string | StaticImageData;
+  description: string;
+}
+
+/**
  * Stat section
  */
 export interface Stat {
