@@ -1,8 +1,6 @@
 import {
   AcademicCapIcon,
   ArrowDownTrayIcon,
-  BuildingOffice2Icon,
-  CalendarIcon,
   FlagIcon,
   MapIcon,
   SparklesIcon,
@@ -75,7 +73,7 @@ export const heroData: Hero = {
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
         In my free time time, you can catch me <strong className="text-stone-100">Snowboarding</strong>,
-        slapping my <strong className="text-stone-100">bass guitar</strong>, or camping all over{' '}
+        slapping my <strong className="text-stone-100">Bass Guitar</strong>, or camping all over{' '}
         <strong className="text-stone-100">Utah</strong>.
       </p>
     </>
@@ -104,12 +102,10 @@ export const aboutData: About = {
   to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
   in.`,
   aboutItems: [
-    {label: 'Location', text: 'Victoria, BC', Icon: MapIcon},
-    {label: 'Age', text: '29', Icon: CalendarIcon},
-    {label: 'Nationality', text: 'Canadian / Irish', Icon: FlagIcon},
-    {label: 'Interests', text: 'Motorcycles, Muay Thai, Banjos', Icon: SparklesIcon},
-    {label: 'Study', text: 'University of Victoria', Icon: AcademicCapIcon},
-    {label: 'Employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
+    {label: 'Location', text: 'Sandy, Utah', Icon: MapIcon},
+    {label: 'Nationality', text: 'American / White', Icon: FlagIcon},
+    {label: 'Interests', text: 'Motorcycles, Bass Guitar, Snowboarding, Camping, Hiking', Icon: SparklesIcon},
+    {label: 'Study', text: 'University of Utah', Icon: AcademicCapIcon},
   ],
 };
 
@@ -131,53 +127,69 @@ export const skills: SkillGroup[] = [
     ],
   },
   {
-    name: 'Frontend development',
+    name: 'Languages, Frameworks, and Libraries',
     skills: [
       {
         name: 'React',
-        level: 9,
+        level: 5,
       },
       {
-        name: 'Typescript',
-        level: 7,
+        name: 'Javascript/Typescript',
+        level: 5,
       },
       {
-        name: 'GraphQL',
+        name: 'C/C++/C#/Java',
+        level: 6,
+      },
+      {
+        name: 'Python',
+        level: 6,
+      },
+      {
+        name: 'MySQL/MariaDB',
+        level: 5,
+      },
+    ],
+  },
+  {
+    name: 'Development Tools',
+    skills: [
+      {
+        name: 'VS Code',
+        level: 8,
+      },
+      {
+        name: 'Docker',
+        level: 5,
+      },
+      {
+        name: 'Git',
+        level: 5,
+      },
+      {
+        name: 'Linux CLI',
         level: 6,
       },
     ],
   },
   {
-    name: 'Backend development',
+    name: 'Platforms and Networking Tools',
     skills: [
       {
-        name: 'Node.js',
-        level: 8,
+        name: 'PfSense',
+        level: 6,
       },
       {
-        name: 'Rust',
+        name: 'Proxmox',
+        level: 4,
+      },
+      {
+        name: 'Home Assistant',
         level: 5,
       },
       {
-        name: 'Golang',
+        name: 'Wireshark',
         level: 4,
-      },
-    ],
-  },
-  {
-    name: 'Mobile development',
-    skills: [
-      {
-        name: 'React Native',
-        level: 9,
-      },
-      {
-        name: 'Flutter',
-        level: 4,
-      },
-      {
-        name: 'Swift',
-        level: 3,
       },
     ],
   },
@@ -260,39 +272,29 @@ export const portfolioItems: PortfolioItem[] = [
  */
 export const education: TimelineItem[] = [
   {
-    date: 'April 2007',
-    location: 'Clown college',
-    title: 'Masters in Beer tasting',
+    date: 'September 2020 - December 2024 (Expected)',
+    location: 'University of Utah',
+    title: 'Bachelor\'s in Computer Science',
     content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
   },
   {
-    date: 'March 2003',
-    location: 'School of Business',
-    title: 'What did you study 101',
+    date: 'September 2018 - August 2020',
+    location: 'Salt Lake Community College',
+    title: 'Associate\'s in Information Systems',
     content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
   },
 ];
 
 export const experience: TimelineItem[] = [
   {
-    date: 'March 2010 - Present',
-    location: 'Awesome Development Company',
-    title: 'Senior UX Engineer',
+    date: 'July 2016 - March 2018',
+    location: 'Romac Services',
+    title: 'Team Member, then Crew Chief',
     content: (
       <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
-      </p>
-    ),
-  },
-  {
-    date: 'March 2007 - February 2010',
-    location: 'Garage Startup Studio',
-    title: 'Junior bug fixer',
-    content: (
-      <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
+        Directed a team of associates in completing services,
+        performed multiple tasks for local businesses, and
+        fixed various mechanical and industrial equipment.
       </p>
     ),
   },
@@ -333,6 +335,7 @@ export const contact: ContactSection = {
     {
       type: ContactType.Phone,
       text: '801-403-7292',
+      href: 'tel:+18014037292',
     },
     {
       type: ContactType.Email,
