@@ -75,9 +75,9 @@ export const heroData: Hero = {
         for an <strong className="text-stone-100">Internship</strong> to gain relevant experiance in the field.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me <strong className="text-stone-100">Snowboarding</strong>,
-        slapping my <strong className="text-stone-100">Bass Guitar</strong>, or camping all over{' '}
-        <strong className="text-stone-100">Utah</strong>.
+        In my free time time, you might catch me playing my <strong className="text-stone-100">Bass Guitar</strong>, camping and hiking all over 
+        <strong className="text-stone-100"> Utah</strong>, fixing anything <strong className="text-stone-100">Electronic</strong>, 
+        or even working on cars.
       </p>
     </>
   ),
@@ -101,14 +101,13 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `Use this bio section as your way of describing yourself and saying what you do, what technologies you like
-  to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
-  in.`,
+  description: `I'm close to finishing up my Computer Science Degree at the U and am looking for and internship and an opportunity
+  to work with a skilled team. I'm a problem solver, organized, and I'm easy to get along with.`,
   aboutItems: [
     {label: 'Location', text: 'Sandy, Utah', Icon: MapIcon},
     {label: 'Nationality', text: 'American / White', Icon: FlagIcon},
-    {label: 'Interests', text: 'Motorcycles, Bass Guitar, Snowboarding, Camping, Hiking', Icon: SparklesIcon},
-    {label: 'Study', text: 'University of Utah', Icon: AcademicCapIcon},
+    {label: 'Interests', text: 'Exciting activities, Good Food, Good People', Icon: SparklesIcon},
+    {label: 'Studying at', text: 'University of Utah', Icon: AcademicCapIcon},
   ],
 };
 
