@@ -9,7 +9,7 @@ import {
 import GithubIcon from '../components/Icon/GithubIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import heroImage from '../images/background.jpg';
-import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
+import porfolioImage1 from '../images/portfolio/EndangeredAnimalSlideGame.png';
 import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
 import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
 import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
@@ -76,8 +76,8 @@ export const heroData: Hero = {
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
         In my free time time, you might catch me playing my <strong className="text-stone-100">Bass Guitar</strong>, camping and hiking all over 
-        <strong className="text-stone-100"> Utah</strong>, fixing anything <strong className="text-stone-100">Electronic</strong>, 
-        or even working on cars.
+        <strong className="text-stone-100"> Utah</strong>, fixing <strong className="text-stone-100">Electronics</strong>, 
+        and even working on cars.
       </p>
     </>
   ),
@@ -211,8 +211,8 @@ export const skills: SkillGroup[] = [
 export const portfolioItems: PortfolioItem[] = [
   {
     title: 'Project title 1',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    description: 'I created a slide game featuring endangerd animals using Qt and C++. It\'s fully responsive, has animations and is fun to play! To try it out for yourself clone the repository and run the exe file.',
+    url: 'https://github.com/awpoch/EndangeredAnimalsSlideGame',
     image: porfolioImage1,
   },
   {
