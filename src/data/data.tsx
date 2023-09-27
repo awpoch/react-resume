@@ -152,7 +152,7 @@ export const skills: SkillGroup[] = [
         level: 6,
       },
       {
-        name: 'Python',
+        name: 'Python/PHP',
         level: 6,
       },
       {
@@ -285,13 +285,13 @@ export const education: TimelineItem[] = [
     date: 'September 2020 - December 2024 (Expected)',
     location: 'University of Utah',
     title: 'Bachelor\'s in Computer Science',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    content: <p>U of U was great for teaching a broad understanding computers, not just how to code. Things like networking, compilers, interpreters, algorithms, memory allocation, Boolean logic, and advanced math.</p>,
   },
   {
     date: 'September 2018 - August 2020',
     location: 'Salt Lake Community College',
     title: 'Associate\'s in Information Systems',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    content: <p>SLCC was great for getting the majority of my generals completed and learning basic programming skills like how loops work, binary numbering, floating point values, data structures, and basic web development.</p>,
   },
 ];
 
