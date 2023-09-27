@@ -210,7 +210,7 @@ export const skills: SkillGroup[] = [
  */
 export const portfolioItems: PortfolioItem[] = [
   {
-    title: 'Project title 1',
+    title: 'Endangered Animal Slide Game!',
     description: 'I created a slide game featuring endangerd animals using Qt and C++. It\'s fully responsive, has animations and is fun to play! To try it out for yourself clone the repository and run the exe file.',
     url: 'https://github.com/awpoch/EndangeredAnimalsSlideGame',
     image: porfolioImage1,
