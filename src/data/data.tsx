@@ -9,11 +9,11 @@ import {
 import GithubIcon from '../components/Icon/GithubIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import heroImage from '../images/background.jpg';
-import porfolioImage1 from '../images/portfolio/EndangeredAnimalSlideGame.png';
-import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
-import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
-import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
-import porfolioImage5 from '../images/portfolio/portfolio-5.jpg';
+const porfolioImage1 = require('../images/portfolio/EndangeredAnimalsAnimation.gif')
+const porfolioImage2 = require('../images/portfolio/SpriteEditorAnimation.gif')
+import porfolioImage3 from '../images/portfolio/PythonProxy.png';
+const porfolioImage4 = require('../images/portfolio/TankWarsAnimation.gif')
+import porfolioImage5 from '../images/portfolio/ReactResume.png';
 import porfolioImage6 from '../images/portfolio/portfolio-6.jpg';
 import porfolioImage7 from '../images/portfolio/portfolio-7.jpg';
 import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
@@ -211,32 +211,32 @@ export const skills: SkillGroup[] = [
 export const portfolioItems: PortfolioItem[] = [
   {
     title: 'Endangered Animal Slide Game!',
-    description: 'I created a slide game featuring endangerd animals using Qt and C++. It\'s fully responsive, has animations and is fun to play! To try it out for yourself clone the repository and run the exe file.',
+    description: 'I created a slide game featuring endangerd animals using Qt and C++.',
     url: 'https://github.com/awpoch/EndangeredAnimalsSlideGame',
     image: porfolioImage1,
   },
   {
-    title: 'Project title 2',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'Sprite Editor',
+    description: 'School project where I created a sprite editor using Qt and C++.',
+    url: 'https://github.com/awpoch/Sprite-Editor',
     image: porfolioImage2,
   },
   {
-    title: 'Project title 3',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'Python Proxy',
+    description: '3 scripts, a client, a proxy, and server.',
+    url: 'https://github.com/awpoch/PythonProxy',
     image: porfolioImage3,
   },
   {
-    title: 'Project title 4',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'Tank Wars Game',
+    description: 'An online multiplayer tank game with computer players',
+    url: 'https://github.com/awpoch/TankWars',
     image: porfolioImage4,
   },
   {
-    title: 'Project title 5',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'React Resume',
+    description: 'Created this react website showcasing myself and my acomplishments.',
+    url: 'https://github.com/awpoch/react-resume',
     image: porfolioImage5,
   },
   {
