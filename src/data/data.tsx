@@ -1,3 +1,4 @@
+/* eslint-disable simple-import-sort/imports */
 import {
   AcademicCapIcon,
   ArrowDownTrayIcon,
@@ -9,13 +10,13 @@ import {
 import GithubIcon from '../components/Icon/GithubIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import heroImage from '../images/background.jpg';
-const porfolioImage1 = require('../images/portfolio/EndangeredAnimalsAnimation.gif')
-const porfolioImage2 = require('../images/portfolio/SpriteEditorAnimation.gif')
+import porfolioImage1 from '../images/portfolio/EndangeredAnimalsAnimation.gif'
+import porfolioImage2 from '../images/portfolio/SpriteEditorAnimation.gif'
 import porfolioImage3 from '../images/portfolio/PythonProxy.png';
-const porfolioImage4 = require('../images/portfolio/TankWarsAnimation.gif')
+import porfolioImage4  from '../images/portfolio/TankWarsAnimation.gif'
 import porfolioImage5 from '../images/portfolio/ReactResume.png';
-import porfolioImage6 from '../images/portfolio/portfolio-6.jpg';
-import porfolioImage7 from '../images/portfolio/portfolio-7.jpg';
+import porfolioImage6 from '../images/portfolio/HomeAssistant.png';
+import porfolioImage7 from '../images/portfolio/Proxmox.png';
 import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
 import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
 import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
@@ -240,39 +241,39 @@ export const portfolioItems: PortfolioItem[] = [
     image: porfolioImage5,
   },
   {
-    title: 'Project title 6',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'Home Assistant',
+    description: 'Created a smart home with Home Assistant, Zwave and Zigbee.',
+    url: 'https://www.home-assistant.io/',
     image: porfolioImage6,
   },
   {
-    title: 'Project title 7',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'Proxmox',
+    description: 'Setup a virtual environment with Proxmox to run my home services.',
+    url: 'https://www.proxmox.com/en/',
     image: porfolioImage7,
   },
   {
     title: 'Project title 8',
     description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    url: '',
     image: porfolioImage8,
   },
   {
     title: 'Project title 9',
     description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    url: '',
     image: porfolioImage9,
   },
   {
     title: 'Project title 10',
     description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    url: '',
     image: porfolioImage10,
   },
   {
     title: 'Project title 11',
     description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    url: '',
     image: porfolioImage11,
   },
 ];
@@ -318,17 +319,17 @@ export const testimonial: TestimonialSection = {
   testimonials: [
     {
       name: 'John Doe',
-      text: 'Use this as an opportunity to promote what it is like to work with you. High value testimonials include ones from current or past co-workers, managers, or from happy clients.',
+      text: 'Personal quote here.',
       image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/169.jpg',
     },
     {
       name: 'Jane Doe',
-      text: 'Here you should write some nice things that someone has said about you. Encourage them to be specific and include important details (notes about a project you were on together, impressive quality produced, etc).',
+      text: 'Personal quote here.',
       image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/14.jpg',
     },
     {
       name: 'Someone else',
-      text: 'Add several of these, and keep them as fresh as possible, but be sure to focus on quality testimonials with strong highlights of your skills/work ethic.',
+      text: 'Personal quote here.',
       image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/69.jpg',
     },
   ],
