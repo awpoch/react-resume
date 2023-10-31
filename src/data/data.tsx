@@ -17,7 +17,7 @@ import porfolioImage4  from '../images/portfolio/TankWarsAnimation.gif'
 import porfolioImage5 from '../images/portfolio/ReactResume.png';
 import porfolioImage6 from '../images/portfolio/HomeAssistant.png';
 import porfolioImage7 from '../images/portfolio/Proxmox.png';
-import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
+import porfolioImage8 from '../images/portfolio/pfsense.png';
 import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
 import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
 import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
@@ -252,9 +252,9 @@ export const portfolioItems: PortfolioItem[] = [
     image: porfolioImage7,
   },
   {
-    title: 'Project title 8',
-    description: 'Give a short description of your project here.',
-    url: '',
+    title: 'PfSense',
+    description: 'Setup a a firewall for home use which has multiple LANS to seperate what devices on my network have access to.',
+    url: 'pages/pfsense.tsx',
     image: porfolioImage8,
   },
   {
