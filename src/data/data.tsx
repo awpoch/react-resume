@@ -9,7 +9,7 @@ import {
 
 import GithubIcon from '../components/Icon/GithubIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
-import heroImage from '../images/background.jpg';
+import heroImage from '../images/Delicate.jpg';
 import porfolioImage1 from '../images/portfolio/EndangeredAnimalsAnimation.gif'
 import porfolioImage2 from '../images/portfolio/SpriteEditorAnimation.gif'
 import porfolioImage3 from '../images/portfolio/PythonProxy.png';
@@ -22,8 +22,7 @@ import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
 import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
 import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
 import profilepic from '../images/profilepic.jpg';
-import testimonialImage from '../images/testimonial.webp';
-import videoImage from '../images/videoImage.webp';
+import background from '../images/circuitBoard.jpg';
 import {
   About,
   ContactSection,
@@ -116,7 +115,7 @@ export const aboutData: About = {
  * Video section
  */
 export const videoData: Video = {
-  imageSrc: videoImage,
+  imageSrc: background,
   description: `Video of my Bass Skills`,
 };
 
@@ -315,7 +314,7 @@ export const experience: TimelineItem[] = [
  * Testimonial section
  */
 export const testimonial: TestimonialSection = {
-  imageSrc: testimonialImage,
+  imageSrc: background,
   testimonials: [
     {
       name: 'John Doe',

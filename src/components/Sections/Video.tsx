@@ -1,8 +1,8 @@
-import {FC, memo, useEffect, useState, useMemo} from 'react';
 import classNames from 'classnames';
+import {FC, memo, useEffect, useMemo,useState} from 'react';
 
 import {isApple, isMobile} from '../../config';
-import {videoData, SectionId} from '../../data/data';
+import {SectionId,videoData} from '../../data/data';
 import Section from '../Layout/Section';
 
 const Hero: FC = memo(() => {
@@ -35,7 +35,7 @@ const Hero: FC = memo(() => {
         {'bg-neutral-700': !imageSrc},
         )}
         style={imageSrc ? {backgroundImage: `url(${resolveSrc}`} : undefined}>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/5NorFemc490?si=vAEAzF7tyKXBeClw" title="YouTube video player" frameBorder="0"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />
+            <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen frameBorder="0" height="315" src="https://www.youtube.com/embed/5NorFemc490?si=vAEAzF7tyKXBeClw"  title="YouTube video player" width="560" />
       </div>
     </Section>
   );

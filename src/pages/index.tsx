@@ -8,8 +8,8 @@ import Footer from '../components/Sections/Footer';
 import Hero from '../components/Sections/Hero';
 import Portfolio from '../components/Sections/Portfolio';
 import Resume from '../components/Sections/Resume';
-import Video from '../components/Sections/Video';
 import Testimonials from '../components/Sections/Testimonials';
+import Video from '../components/Sections/Video';
 import {homePageMeta} from '../data/data';
 
 // eslint-disable-next-line react-memo/require-memo
