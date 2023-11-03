@@ -20,7 +20,7 @@ const proxmox: FC = memo(() => {
                 textAlign: "center",
                 zIndex: 1
                 }}>
-                <Image alt="Image" src={backgroundImg} />
+                <Image alt="Image" height={6472} placeholder= "blur" priority src={backgroundImg} width={3641} />
                 <div style={{
                     position: "absolute",
                     top: "0",
