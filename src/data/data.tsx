@@ -124,6 +124,73 @@ export const videoData: Video = {
  */
 export const skills: SkillGroup[] = [
   {
+    name: 'Languages, Frameworks, and Libraries',
+    skills: [
+      {
+        name: 'C/C++/C#/Java',
+        level: 10,
+      },
+      {
+        name: 'Python/PHP',
+        level: 7,
+      },
+      {
+        name: 'React/Javascript/Typescript',
+        level: 5,
+      },
+      {
+        name: 'MySQL/MariaDB',
+        level: 4,
+      },
+    ],
+  },
+  {
+    name: 'Development Tools',
+    skills: [
+      {
+        name: 'VS Code',
+        level: 10,
+      },
+      {
+        name: 'Linux CLI',
+        level: 9,
+      },
+      {
+        name: 'Git',
+        level: 8,
+      },
+      {
+        name: 'Docker/Docker Compose',
+        level: 7,
+      },
+    ],
+  },
+  {
+    name: 'Platforms and Networking Tools',
+    skills: [
+      {
+        name: 'PfSense',
+        level: 10,
+      },
+      {
+        name: 'Wireshark',
+        level: 8,
+      },
+      {
+        name: 'Home Assistant',
+        level: 8,
+      },
+      {
+        name: 'Proxmox',
+        level: 7,
+      },
+      {
+        name: 'Amazon Web Services',
+        level: 5,
+      },
+    ],
+  },
+  {
     name: 'Spoken languages',
     skills: [
       {
@@ -136,73 +203,6 @@ export const skills: SkillGroup[] = [
       },
     ],
   },
-  {
-    name: 'Languages, Frameworks, and Libraries',
-    skills: [
-      {
-        name: 'React',
-        level: 5,
-      },
-      {
-        name: 'Javascript/Typescript',
-        level: 5,
-      },
-      {
-        name: 'C/C++/C#/Java',
-        level: 6,
-      },
-      {
-        name: 'Python/PHP',
-        level: 6,
-      },
-      {
-        name: 'MySQL/MariaDB',
-        level: 5,
-      },
-    ],
-  },
-  {
-    name: 'Development Tools',
-    skills: [
-      {
-        name: 'VS Code',
-        level: 8,
-      },
-      {
-        name: 'Docker',
-        level: 5,
-      },
-      {
-        name: 'Git',
-        level: 5,
-      },
-      {
-        name: 'Linux CLI',
-        level: 6,
-      },
-    ],
-  },
-  {
-    name: 'Platforms and Networking Tools',
-    skills: [
-      {
-        name: 'PfSense',
-        level: 6,
-      },
-      {
-        name: 'Proxmox',
-        level: 4,
-      },
-      {
-        name: 'Home Assistant',
-        level: 5,
-      },
-      {
-        name: 'Wireshark',
-        level: 4,
-      },
-    ],
-  },
 ];
 
 /**
@@ -212,7 +212,7 @@ export const portfolioItems: PortfolioItem[] = [
   {
     title: 'Endangered Animal Slide Game!',
     description: 'I created a slide game featuring endangerd animals using Qt and C++.',
-    url: 'https://github.com/awpoch/EndangeredAnimalsSlideGame',
+    url: 'https://github.com/awpoch/EndangeredAnimalsSlideGame.git',
     image: porfolioImage1,
   },
   {
