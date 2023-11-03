@@ -242,19 +242,19 @@ export const portfolioItems: PortfolioItem[] = [
   {
     title: 'Home Assistant',
     description: 'Created a smart home with Home Assistant, Zwave and Zigbee.',
-    url: 'https://www.home-assistant.io/',
+    url: 'homeassistant',
     image: porfolioImage6,
   },
   {
     title: 'Proxmox',
     description: 'Setup a virtual environment with Proxmox to run my home services.',
-    url: 'https://www.proxmox.com/en/',
+    url: 'proxmox',
     image: porfolioImage7,
   },
   {
     title: 'PfSense',
     description: 'Setup a a firewall for home use which has multiple LANS to seperate what devices on my network have access to.',
-    url: 'pages/pfsense.tsx',
+    url: 'pfsense',
     image: porfolioImage8,
   },
   {
