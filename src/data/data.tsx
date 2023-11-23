@@ -18,9 +18,9 @@ import porfolioImage5 from '../images/portfolio/ReactResume.png';
 import porfolioImage6 from '../images/portfolio/HomeAssistant.png';
 import porfolioImage7 from '../images/portfolio/Proxmox.png';
 import porfolioImage8 from '../images/portfolio/pfsense.png';
-import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
-import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
-import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
+import porfolioImage9 from '../images/portfolio/SecuritySystem.png';
+import porfolioImage10 from '../images/portfolio/HomeOffice.jpg';
+import porfolioImage11 from '../images/portfolio/ElectronicsLab.jpg';
 import profilepic from '../images/profilepic.jpg';
 import background from '../images/circuitBoard.jpg';
 import {
@@ -72,7 +72,7 @@ export const heroData: Hero = {
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
         I'm a student at <strong className="text-stone-100">University of Utah</strong> 28 credits away from a Bachelor's Degree in Comupter Science, currently looking
-        for an <strong className="text-stone-100">Internship</strong> to gain relevant experiance in the field.
+        for a <strong className="text-stone-100">Job</strong> or an <strong className="text-stone-100">Internship</strong> to gain relevant experiance in the field.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
         In my free time time, you might catch me playing my <strong className="text-stone-100">Bass Guitar</strong>, camping and hiking all over 
@@ -210,10 +210,22 @@ export const skills: SkillGroup[] = [
  */
 export const portfolioItems: PortfolioItem[] = [
   {
+    title: 'Tank Wars Game',
+    description: 'An online multiplayer tank game with computer players',
+    url: 'https://github.com/awpoch/TankWars',
+    image: porfolioImage4,
+  },
+  {
     title: 'Endangered Animal Slide Game!',
     description: 'I created a slide game featuring endangerd animals using Qt and C++.',
     url: 'https://github.com/awpoch/EndangeredAnimalsSlideGame.git',
     image: porfolioImage1,
+  },
+  {
+    title: 'Home Security System',
+    description: 'I setup a home security system using Blue Iris.',
+    url: 'securitySystem',
+    image: porfolioImage9,
   },
   {
     title: 'Sprite Editor',
@@ -222,34 +234,22 @@ export const portfolioItems: PortfolioItem[] = [
     image: porfolioImage2,
   },
   {
-    title: 'Python Proxy',
-    description: '3 scripts, a client, a proxy, and server.',
-    url: 'https://github.com/awpoch/PythonProxy',
-    image: porfolioImage3,
-  },
-  {
-    title: 'Tank Wars Game',
-    description: 'An online multiplayer tank game with computer players',
-    url: 'https://github.com/awpoch/TankWars',
-    image: porfolioImage4,
-  },
-  {
     title: 'React Resume',
     description: 'Created this react website showcasing myself and my acomplishments.',
     url: 'https://github.com/awpoch/react-resume',
     image: porfolioImage5,
   },
   {
-    title: 'Home Assistant',
-    description: 'Created a smart home with Home Assistant, Zwave and Zigbee.',
-    url: 'homeassistant',
-    image: porfolioImage6,
+    title: 'Python Proxy',
+    description: '3 scripts, a client, a proxy, and server.',
+    url: 'https://github.com/awpoch/PythonProxy',
+    image: porfolioImage3,
   },
   {
-    title: 'Proxmox',
-    description: 'Setup a virtual environment with Proxmox to run my home services.',
-    url: 'proxmox',
-    image: porfolioImage7,
+    title: 'Home Assistant',
+    description: 'Created a smart home with Home Assistant, Zwave and Zigbee.',
+    url: 'homeAssistant',
+    image: porfolioImage6,
   },
   {
     title: 'PfSense',
@@ -257,22 +257,23 @@ export const portfolioItems: PortfolioItem[] = [
     url: 'pfsense',
     image: porfolioImage8,
   },
+  
   {
-    title: 'Project title 9',
-    description: 'Give a short description of your project here.',
-    url: '',
-    image: porfolioImage9,
+    title: 'Proxmox',
+    description: 'Setup a virtual environment with Proxmox to run my home services.',
+    url: 'proxmox',
+    image: porfolioImage7,
   },
   {
-    title: 'Project title 10',
-    description: 'Give a short description of your project here.',
-    url: '',
+    title: 'Home Office',
+    description: 'Setup a comfortable home office.',
+    url: 'homeOffice',
     image: porfolioImage10,
   },
   {
-    title: 'Project title 11',
-    description: 'Give a short description of your project here.',
-    url: '',
+    title: 'Electronics Lab',
+    description: 'I setup an electrinics repair lab in my office.',
+    url: 'electronicsLab',
     image: porfolioImage11,
   },
 ];

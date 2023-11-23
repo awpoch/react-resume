@@ -1,10 +1,10 @@
 import Image from 'next/image'
 import {FC, memo, useState} from 'react';
 
-import proxmoxImage from "../images/portfolio/proxmox.png";
+import securitySystemImage from "../images/portfolio/SecuritySystem.png";
 import backgroundImg from "../images/stars.jpg";
 
-const proxmox: FC = memo(() => {
+const securitySystem: FC = memo(() => {
     
     const [isHover, setIsHover] = useState(false);
     const handleMouseEnter = () => { setIsHover(true); };
@@ -19,36 +19,32 @@ const proxmox: FC = memo(() => {
                     right: "0",
                     margin: "auto", 
                     width: "75%",
-                    maxWidth: "1180px",
+                    maxWidth: "759px",
                     textAlign: "center",
                     color: "white"}}>
                     <br/>
                     <h1 style={{fontSize: "3rem"}}>
-                        Proxmox Virtual Environment
+                        Home Security System
                     </h1>
                     <br/>
                     <div>
-                        I setup a home lab using proxmox to run all my home services. 
-                        With proxmox I'm able to virutalize my router/firewall with pfsense, 
-                        run home assistant for my all my smart home devices and automations, 
-                        and run docker in linux for a cloudflare tunnel. Below is a link to 
-                        a proxmox overview page and a picture of my setup.
+                        I setup a home security system using Blue Iris.
                     </div>
                     <br/>
                     <div>
-                        <a href="https://www.proxmox.com/en/proxmox-virtual-environment/overview" onMouseEnter={handleMouseEnter} 
+                        <a href="https://blueirissoftware.com/" onMouseEnter={handleMouseEnter} 
                            onMouseLeave={handleMouseLeave} style={{
                             color: isHover ? 'blue' : 'DodgerBlue',
                             textDecoration: "underline"}}>
-                            Proxmox Virtual Environment Overview
+                            Blue Iris Overview
                         </a>
                     </div>
                     <br/>
                     <div>
-                        <Image alt="Image" src={proxmoxImage} />
+                        <Image alt="Image" src={securitySystemImage} />
                     </div>
                 </div>
             </div>;
   });
   
-  export default proxmox;
+  export default securitySystem;
