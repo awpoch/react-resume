@@ -10,8 +10,7 @@
 
 ### More Information:
 * Showcases me and my achievements
-* Links to each personal project
-* 
+* Links to each of my personal projects
 
 ### Here's a Preview:
 ![ReactJS Resume Website](src/images/portfolio/ReactResume.png?raw=true 'ReactJS Resume Website')
