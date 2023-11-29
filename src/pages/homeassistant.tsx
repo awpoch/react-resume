@@ -1,46 +1,48 @@
 /* eslint-disable react-memo/require-usememo */
-import Image from 'next/image'
+import Image from 'next/image';
 import {FC, memo, MutableRefObject, useEffect, useRef, useState} from 'react';
+import Favicon from "react-favicon";
 
 import Nav from '../components/nav';
 import homeAssistantImage from "../images/portfolio/HomeAssistant.png";
 import backgroundImg from "../images/stars.jpg";
 
 const homeAssistant: FC= memo(() => {
-    
-    const [navWidth, setNavWidth] = useState(false);
-    const childToParent = (childData: boolean | ((prevState: boolean) => boolean)) => { setNavWidth(childData);}
+
+    const [navOpen, setNavOpen] = useState(false);
+    const childToParent = (childData: boolean | ((prevState: boolean) => boolean)) => { setNavOpen(childData);}
     
     const [bgHeight, setBgHeight] = useState(0);
     const bgHeightRef = useRef() as MutableRefObject<HTMLDivElement>;;
     
     useEffect(() => {
-        function rerender() {
+        function render() {
             setBgHeight(bgHeightRef.current.clientHeight);
         }
-        rerender();
-        window.addEventListener('resize', rerender);
+        render();
+        window.addEventListener('resize', render);
     }, []);
 
     const projectsList = [
-        ["Tank Wars Game", "/HomeAssistantIcon.png"],
-        ["Endangered Animal Game", "/HomeAssistantIcon.png"],
-        ["Home Security System", "/HomeAssistantIcon.png"],
-        ["Sprite Editor", "/HomeAssistantIcon.png"],
-        ["React Resume", "/HomeAssistantIcon.png"],
-        ["Python Proxy", "/HomeAssistantIcon.png"],
-        ["Home Assistant", "/HomeAssistantIcon.png"],
-        ["pfSense", "/HomeAssistantIcon.png"],
-        ["Proxmox", "/HomeAssistantIcon.png"],
-        ["Home Office", "/HomeAssistantIcon.png"],
-        ["Electronics Lab", "/HomeAssistantIcon.png"]        
-        ];
+        ["React Resume", "/logo.png", "https://github.com/awpoch/react-resume", "not selected"],
+        ["Tank Wars Game", "/TankWars.png", "https://github.com/awpoch/TankWars", "not selected"],
+        ["Endangered Animals Game", "/EndangeredAnimals.png", "https://github.com/awpoch/EndangeredAnimalsSlideGame.git", "not selected"],
+        ["Home Security System", "/SecurityCamera.png", "securitySystem", "not selected"],
+        ["Sprite Editor", "/SpriteEditor.png", "https://github.com/awpoch/Sprite-Editor", "not selected"],
+        ["Python Proxy", "/Proxy.png", "https://github.com/awpoch/PythonProxy", "not selected"],
+        ["Home Assistant", "/HomeAssistant.png", "homeAssistant", "selected"],
+        ["pfSense", "/pfsense.png", "pfsense", "not selected"],
+        ["Proxmox", "/Proxmox.png", "proxmox", "not selected"],
+        ["Home Office", "/HomeOffice.png", "homeOffice", "not selected"],
+        ["Electronics Lab", "/ElectronicsLab.png", "electronicsLab", "not selected"]        
+    ];
     
     const [isHover, setIsHover] = useState(false);
     const handleMouseEnter = () => { setIsHover(true); };
     const handleMouseLeave = () => { setIsHover(false); };
 
-    return <div style={{position: "static"}}>  
+    return  <div style={{position: "static"}}>  
+                <Favicon url='/HomeAssistant.png' />
                 <div style={{
                     position: "absolute",
                     overflow: "hidden"}}>
@@ -48,7 +50,7 @@ const homeAssistant: FC= memo(() => {
                 </div>
                 <div ref={bgHeightRef} style={{
                     position: "absolute",
-                    left: navWidth === false ? 60 : 250,
+                    left: navOpen === false ? 60 : 255,
                     transition: "all 0.5s ease"}}>
                     <div style={{
                         position: "relative"}}>
@@ -78,7 +80,7 @@ const homeAssistant: FC= memo(() => {
                             <br/>
                             <div>
                                 <a href="https://www.home-assistant.io/" onMouseEnter={handleMouseEnter} 
-                                   onMouseLeave={handleMouseLeave} style={{
+                                    onMouseLeave={handleMouseLeave} style={{
                                     color: isHover ? 'blue' : 'DodgerBlue',
                                     textDecoration: "underline"}}>
                                     Home Assistant Overview
@@ -92,6 +94,6 @@ const homeAssistant: FC= memo(() => {
                     </div>
                 </div>
             </div>;
-  });
+});
   
-  export default homeAssistant;
+export default homeAssistant;
