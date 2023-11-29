@@ -4,7 +4,7 @@ import {FC, memo, MutableRefObject, useEffect, useRef, useState} from 'react';
 import Favicon from "react-favicon";
 
 import Nav from '../components/nav';
-import proxmoxImage from "../images/portfolio/proxmox.png";
+import proxmoxImage from "../images/portfolio/Proxmox.png";
 import backgroundImg from "../images/stars.jpg";
 
 const proxmox: FC = memo(() => {
