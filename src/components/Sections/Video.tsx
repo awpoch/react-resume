@@ -38,7 +38,7 @@ const Hero: FC = memo(() => {
           style={imageSrc ? {backgroundImage: `url(${resolveSrc}`} : undefined}>
             <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; 
             web-share" allowFullScreen frameBorder="0" height="315" 
-            src="https://www.youtube.com/embed/5NorFemc490?si=vAEAzF7tyKXBeClw"  
+            src="https://www.youtube.com/embed/7fSSjJfBFGo?si=AbX_GKTwl20ex0v7"  
             title="YouTube video player" width="560" />
           <br/><br/>
         </div>
