@@ -17,7 +17,8 @@ const pfsense: FC = memo(() => {
     
     useEffect(() => {
         function render() {
-            setBgHeight(bgHeightRef.current.clientHeight);
+            if(bgHeightRef.current !== null)
+                setBgHeight(bgHeightRef.current.clientHeight);
         }
         render();
         window.addEventListener('resize', render);

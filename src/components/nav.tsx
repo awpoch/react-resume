@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link';
 import {FC, memo, useState} from 'react';
 
 import burgerImage from "../images/menu.svg";
@@ -27,24 +28,58 @@ const Nav: FC<Props> = memo(({projectsList: li, backgroundHeight: backgroundHeig
                 transition: "all 0.5s ease",
                 width: window === false ? 60 : 255,
                 backgroundColor: "LightGray"}}>
-                <div style={{
-                    display: "flex"}}>
+                <div style={{}}>
                     <div style={{
-                        display: window === false ? "none" : "inline-block",
-                        padding: "7px",
-                        fontSize: "1.2em",
-                        color: "black",
-                        whiteSpace: "nowrap",
-                        fontWeight: "bold"}}>
-                        Projects Overview
-                    </div>
-                    <div onClick={() => openClose()} style={{
-                        marginLeft: "auto",
+                        display: "flex",
                         padding: "10px"}}>
-                        <Image alt="burger" height={43} src={burgerImage} width={34} />
+                        <Link href="/">
+                        <div style={{
+                            display: window === false ? "none" : "flex",
+                            height: "20px"}}>
+                            <Image alt="Return" height={20} src="/Return.png" width= {20} />
+                            <div style={{
+                                display: window === false ? "none" : "flex",
+                                fontSize: "1.1em",
+                                color: "black",
+                                whiteSpace: "nowrap",
+                                fontWeight: "bold",
+                                marginLeft: "10px"}}>
+                                Return to Portfolio
+                            </div>
+                        </div>
+                        </Link>
+                        <div onClick={() => openClose()} style={{
+                            height: "43px",
+                            marginLeft: "auto"}}>
+                            <Image alt="burger" height={43} src={burgerImage} width={34} />
+                        </div>     
                     </div>
                 </div>
                 <div>
+                    <div style={{
+                        marginLeft: "10px"}}>
+                        <div style={{
+                            display: "flex",
+                            height: "43px"}}>
+                            <Image alt="Projects" height={43} src="/Projects.png" width={43} />
+                            <div style={{
+                                display: window === false ? "none" : "inline-block",
+                                padding: "0px 0px 0px 10px",
+                                position: "relative",
+                                top: "2.5px",
+                                color: "black",
+                                fontSize: "20px",
+                                letterSpacing: "0px",
+                                lineHeight: "38px",
+                                fontFamily: "Lato",
+                                paddingLeft: 15,
+                                whiteSpace: "nowrap",
+                                fontWeight: "bold"}}>
+                                Projects Overview:
+                            </div>
+                        </div>
+                        
+                    </div>
                     <ul style={{listStyleType: "none"}}>
                         {li.map((item, i) => (
                             <div key={i}>
