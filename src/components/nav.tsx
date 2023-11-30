@@ -27,26 +27,26 @@ const Nav: FC<Props> = memo(({projectsList: li, backgroundHeight: backgroundHeig
                 height: backgroundHeight,
                 minHeight: "740px",
                 transition: "all 0.5s ease",
-                width: window === false ? 60 : 255,
+                width: window === false ? 60 : 275,
                 backgroundColor: "LightGray"}}>
                 <div style={{
                     display: "flex",
                     padding: "10px"}}>
                     <Link href="/">
-                    <div style={{
-                        display: window === false ? "none" : "flex",
-                        height: "20px"}}>
-                        <Image alt="Return" height={20} src="/Return.png" width= {20} />
                         <div style={{
                             display: window === false ? "none" : "flex",
-                            fontSize: "1.1em",
-                            color: "black",
-                            whiteSpace: "nowrap",
-                            fontWeight: "bold",
-                            marginLeft: "10px"}}>
-                            Return to Portfolio
+                            height: "20px"}}>
+                            <Image alt="Return" height={20} src="/Return.png" width= {20} />
+                            <div style={{
+                                display: window === false ? "none" : "flex",
+                                fontSize: "1.1em",
+                                color: "black",
+                                whiteSpace: "nowrap",
+                                fontWeight: "bold",
+                                marginLeft: "10px"}}>
+                                Return to Portfolio
+                            </div>
                         </div>
-                    </div>
                     </Link>
                     <div onClick={() => openClose()} style={{
                         height: "43px",
@@ -59,7 +59,8 @@ const Nav: FC<Props> = memo(({projectsList: li, backgroundHeight: backgroundHeig
                         marginLeft: "15px"}}>
                         <div style={{
                             display: "flex",
-                            height: "30px"}}>
+                            height: "30px",
+                            width: "30px"}}>
                             <Image alt="Projects" height={30} src="/Projects.png" width={30} />
                             <div style={{
                                 display: window === false ? "none" : "inline-block",

@@ -47,7 +47,7 @@ const homeOffice: FC = memo(() => {
                 </div>
                 <div ref={bgHeightRef} style={{
                     position: "absolute",
-                    left: navOpen === false ? 60 : 255,
+                    left: navOpen === false ? 60 : 275,
                     transition: "all 0.5s ease"}}>
                     <div style={{
                         position: "relative"}}>
