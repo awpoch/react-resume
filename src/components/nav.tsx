@@ -32,9 +32,11 @@ const Nav: FC<Props> = memo(({projectsList: li, backgroundHeight: backgroundHeig
                     <div style={{
                         display: window === false ? "none" : "inline-block",
                         padding: "7px",
-                        fontSize: "1.4em",
-                        color: "black"}}>
-                        Projects
+                        fontSize: "1.2em",
+                        color: "black",
+                        whiteSpace: "nowrap",
+                        fontWeight: "bold"}}>
+                        Projects Overview
                     </div>
                     <div onClick={() => openClose()} style={{
                         marginLeft: "auto",
@@ -65,7 +67,8 @@ const Nav: FC<Props> = memo(({projectsList: li, backgroundHeight: backgroundHeig
                                         lineHeight: "38px",
                                         fontFamily: "Lato",
                                         fontWeight: 400,
-                                        paddingLeft: 15}}>
+                                        paddingLeft: 15,
+                                        whiteSpace: "nowrap"}}>
                                         {item[0]}
                                     </li>
                                 </a>
