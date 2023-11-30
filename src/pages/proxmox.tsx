@@ -13,7 +13,7 @@ const proxmox: FC = memo(() => {
     const childToParent = (childData: boolean | ((prevState: boolean) => boolean)) => { setNavOpen(childData);}
     
     const [bgHeight, setBgHeight] = useState(0);
-    const bgHeightRef = useRef() as MutableRefObject<HTMLDivElement>;;
+    const bgHeightRef = useRef() as MutableRefObject<HTMLDivElement>;
     
     useEffect(() => {
         function render() {
