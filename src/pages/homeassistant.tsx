@@ -27,12 +27,12 @@ const homeAssistant: FC= memo(() => {
         ["React Resume", "/logo.png", "https://github.com/awpoch/react-resume", "not selected"],
         ["Tank Wars Game", "/TankWars.png", "https://github.com/awpoch/TankWars", "not selected"],
         ["Endangered Animals Game", "/EndangeredAnimals.png", "https://github.com/awpoch/EndangeredAnimalsSlideGame.git", "not selected"],
-        ["Home Security System", "/SecurityCamera.png", "securitySystem", "not selected"],
         ["Sprite Editor", "/SpriteEditor.png", "https://github.com/awpoch/Sprite-Editor", "not selected"],
         ["Python Proxy", "/Proxy.png", "https://github.com/awpoch/PythonProxy", "not selected"],
         ["Home Assistant", "/HomeAssistant.png", "homeAssistant", "selected"],
         ["pfSense", "/pfsense.png", "pfsense", "not selected"],
         ["Proxmox", "/Proxmox.png", "proxmox", "not selected"],
+        ["Home Security System", "/SecurityCamera.png", "securitySystem", "not selected"],
         ["Home Office", "/HomeOffice.png", "homeOffice", "not selected"],
         ["Electronics Lab", "/ElectronicsLab.png", "electronicsLab", "not selected"]        
     ];
