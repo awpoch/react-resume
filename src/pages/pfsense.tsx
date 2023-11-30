@@ -68,18 +68,34 @@ const pfsense: FC = memo(() => {
                             maxWidth: "1026px",
                             textAlign: "center",
                             color: "white"}}>
-                            <br/>
-                            <h1 style={{fontSize: "3rem"}}>
+                            <h1 style={{
+                                fontSize: "3em",
+                                marginTop: "20px"}}>
                                 pfSense Router and Firewall
                             </h1>
-                            <br/>
-                            <div>
-                                I Installed and setup pfSense, a firewall/router. I set up multiple LANs and 
-                                well thought out firewall rules. I also have Wireguard running so I can securly access
+                            <div style={{
+                                marginTop: "20px"}}>
+                                I Installed and setup pfSense, a firewall/router. I set up multiple vlans and implemented
+                                well thought out firewall rules. I also have Wireguard tunnel running so I can securly access
                                 my network from outside my home.
                             </div>
-                            <br/>
-                            <div>
+                            <h2 style={{
+                                textAlign: "left",
+                                fontSize: "1.5em",
+                                marginTop: "20px"}}>
+                                More Information:
+                            </h2>
+                            <ul style={{
+                                listStyle: "disc",
+                                textAlign: "left",
+                                listStylePosition: "inside",
+                                marginTop: "20px"}}>
+                                <li>Using HTTPS/TLS with my own domain poch.one</li>
+                                <li>Using a Wildcard Acme Cert from Let's Encrypt</li>
+                                <li>Easy traffic monitoring using ntopng</li>
+                            </ul>
+                            <div style={{
+                                marginTop: "20px"}}>
                                 <a href="https://www.pfsense.org/" onMouseEnter={handleMouseEnter} 
                                     onMouseLeave={handleMouseLeave} style={{
                                     color: isHover ? 'blue' : 'DodgerBlue',
@@ -87,8 +103,14 @@ const pfsense: FC = memo(() => {
                                     pfSense Overview
                                 </a>
                             </div>
-                            <br/>
-                            <div>
+                            <h3 style={{
+                                textAlign: "left",
+                                fontSize: "1.5em",
+                                marginTop: "20px"}}>
+                                Heres a Picture:
+                            </h3>
+                            <div style={{
+                                marginTop: "20px"}}>
                                 <Image alt="Image" src={pfsenseImage} />
                             </div>
                         </div>

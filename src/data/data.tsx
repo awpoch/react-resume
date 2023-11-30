@@ -21,7 +21,7 @@ import porfolioImage8 from '../images/portfolio/pfsense.png';
 import porfolioImage9 from '../images/portfolio/SecuritySystem.png';
 import porfolioImage10 from '../images/portfolio/HomeOffice.jpg';
 import porfolioImage11 from '../images/portfolio/ElectronicsLab.jpg';
-import profilepic from '../images/profilepic.jpg';
+import profilepic from '../images/ProfilePicture.jpg';
 import background from '../images/circuitBoard.jpg';
 import {
   About,

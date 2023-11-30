@@ -64,17 +64,40 @@ const homeOffice: FC = memo(() => {
                             maxWidth: "4000px",
                             textAlign: "center",
                             color: "white"}}>
-                            <br/>
-                            <h1 style={{fontSize: "3rem"}}>
-                                Comfortable Organized Home Office
+                            <h1 style={{
+                                fontSize: "3rem",
+                                marginTop: "20px"}}>
+                                Home Office
                             </h1>
-                            <br/>
-                            <div>
-                                I setup a home home office with a sit/stand desk, a workstation/toolbox that 
-                                organizes all my electronics, including my pc in a vented locker.
+                            <div style={{
+                                marginTop: "20px"}}>
+                                I setup a comfortable organized Home Office with a sit/stand desk that 
+                                raises and lowers at the push of a button. My pc is hidden away from view in a 
+                                vented locker which gives my office a clean aesthetic.
                             </div>
-                            <br/>
-                            <div>
+                            <h2 style={{
+                                textAlign: "left",
+                                fontSize: "1.5em",
+                                marginTop: "20px"}}>
+                                More Information:
+                            </h2>
+                            <ul style={{
+                                listStyle: "disc",
+                                textAlign: "left",
+                                listStylePosition: "inside",
+                                marginTop: "20px"}}>
+                                <li>A quiet comfortable place to work makes it much easier to focus</li>
+                                <li>My Electronics Lab is in my Home Office which makes it possible to work on projects in one place</li>
+                                <li>Multiple computer and a great home network which make multitasking much easier</li>
+                            </ul>
+                            <h3 style={{
+                                textAlign: "left",
+                                fontSize: "1.5em",
+                                marginTop: "20px"}}>
+                                Heres a Picture:
+                            </h3>
+                            <div style={{
+                                marginTop: "20px"}}>
                                 <Image alt="Image" src={homeOfficeImage} />
                             </div>
                         </div>

@@ -68,18 +68,36 @@ const homeAssistant: FC= memo(() => {
                             maxWidth: "759px",
                             textAlign: "center",
                             color: "white"}}>
-                            <br/>
-                            <h1 style={{fontSize: "3rem"}}>
+                            <h1 style={{
+                                fontSize: "3em",
+                                marginTop: "20px"}}>
                                 Home Assistant Smart Home
                             </h1>
-                            <br/>
-                            <div>
+                            <div style={{
+                                marginTop: "20px"}}>
                                 I Installed and setup Home Assistant, an opensource fully featured smart
                                 home operating system. I utilize Wifi, Zwave, and Zigbee to communicate with
-                                all my smart home devices.
+                                all my smart home devices. I can securly control my many smart home devices 
+                                easily from any internet enabled device using a cloudflare tunnel or my 
+                                wireguard VPN.
                             </div>
-                            <br/>
-                            <div>
+                            <h2 style={{
+                                textAlign: "left",
+                                fontSize: "1.5em",
+                                marginTop: "20px"}}>
+                                More Information:
+                            </h2>
+                            <ul style={{
+                                listStyle: "disc",
+                                textAlign: "left",
+                                listStylePosition: "inside",
+                                marginTop: "20px"}}>
+                                <li>Has great community support</li>
+                                <li>Has more functionality than competing smart home platforms since it's opensource</li>
+                                <li>Easy to integrate new devices and services</li>
+                            </ul>
+                            <div style={{
+                                marginTop: "20px"}}>
                                 <a href="https://www.home-assistant.io/" onMouseEnter={handleMouseEnter} 
                                     onMouseLeave={handleMouseLeave} style={{
                                     color: isHover ? 'blue' : 'DodgerBlue',
@@ -87,8 +105,14 @@ const homeAssistant: FC= memo(() => {
                                     Home Assistant Overview
                                 </a>
                             </div>
-                            <br/>
-                            <div>
+                            <h3 style={{
+                                textAlign: "left",
+                                fontSize: "1.5em",
+                                marginTop: "20px"}}>
+                                Heres a Picture:
+                            </h3>
+                            <div style={{
+                                marginTop: "20px"}}>
                                 <Image alt="Image" src={homeAssistantImage} />
                             </div>
                         </div>

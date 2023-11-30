@@ -68,20 +68,38 @@ const securitySystem: FC = memo(() => {
                             maxWidth: "1280px",
                             textAlign: "center",
                             color: "white"}}>
-                            <br/>
-                            <h1 style={{fontSize: "3rem"}}>
+                            <h1 style={{
+                                fontSize: "3em",
+                                marginTop: "20px"}}>
                                 Home Security System
                             </h1>
-                            <br/>
-                            <div>
+                            <div style={{
+                                marginTop: "20px"}}>
                                 I setup a home security system using Blue Iris. I am using a 24/7 continuous
                                 recording, non-subscritption solution. All my cameras are on their own 
                                 subnet and have no access to the internet for optimal security. I can access
-                                the cameras remotely using a secure VPN tunnel (wireguard). This all works great
-                                because I have Google Fiber which has a Gigabit up and down link.
+                                the cameras remotely using a secure Wirguard VPN tunnel. This all works great
+                                remotly because I have Google Fiber, which has a Gigabit up and down link. 
+                                Blue Iris is the best Security System software out there but it only runs on Windows.
+                                I would prefer that it ran on Linux, because Windows is a resource hog.
                             </div>
-                            <br/>
-                            <div>
+                            <h2 style={{
+                                textAlign: "left",
+                                fontSize: "1.5em",
+                                marginTop: "20px"}}>
+                                More Information:
+                            </h2>
+                            <ul style={{
+                                listStyle: "disc",
+                                textAlign: "left",
+                                listStylePosition: "inside",
+                                marginTop: "20px"}}>
+                                <li>AI motion detection makes alerts easy to configure</li>
+                                <li>Great mobile apps that make viewing footage remotly quick and easy</li>
+                                <li>Can easily store footage locally or in the cloud</li>
+                            </ul>
+                            <div style={{
+                                marginTop: "20px"}}>
                                 <a href="https://blueirissoftware.com/" onMouseEnter={handleMouseEnter} 
                                     onMouseLeave={handleMouseLeave} style={{
                                     color: isHover ? 'blue' : 'DodgerBlue',
@@ -89,8 +107,14 @@ const securitySystem: FC = memo(() => {
                                     Blue Iris Overview
                                 </a>
                             </div>
-                            <br/>
-                            <div>
+                            <h3 style={{
+                                textAlign: "left",
+                                fontSize: "1.5em",
+                                marginTop: "20px"}}>
+                                Heres a Picture:
+                            </h3>
+                            <div style={{
+                                marginTop: "20px"}}>
                                 <Image alt="Image" src={securitySystemImage} />
                             </div>
                         </div>

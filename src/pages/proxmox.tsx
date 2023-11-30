@@ -68,20 +68,37 @@ const proxmox: FC = memo(() => {
                             maxWidth: "1180px",
                             textAlign: "center",
                             color: "white"}}>
-                            <br/>
-                            <h1 style={{fontSize: "3rem"}}>
+                            <h1 style={{
+                                fontSize: "3em",
+                                marginTop: "20px"}}>
                                 Proxmox Virtual Environment
                             </h1>
-                            <br/>
-                            <div>
+                            <div style={{
+                                marginTop: "20px"}}>
                                 I setup a home lab using proxmox to run all my home services. 
                                 With proxmox I'm able to virutalize my router/firewall with pfsense, 
-                                run home assistant for my all my smart home devices and automations, 
-                                and run docker in linux for a cloudflare tunnel. Below is a link to 
+                                run home assistant for my all my smart home devices and automations,
+                                run Windows and Blue Iris for my Security System, and run Docker in 
+                                Linux for to create a Cloudflare tunnel. Below is a link to 
                                 a proxmox overview page and a picture of my setup.
                             </div>
-                            <br/>
-                            <div>
+                            <h2 style={{
+                                textAlign: "left",
+                                fontSize: "1.5em",
+                                marginTop: "20px"}}>
+                                More Information:
+                            </h2>
+                            <ul style={{
+                                listStyle: "disc",
+                                textAlign: "left",
+                                listStylePosition: "inside",
+                                marginTop: "20px"}}>
+                                <li>I can access all my services from one place, no need for hardware access</li>
+                                <li>I able to create clusers of computers to add additional system resources</li>
+                                <li>Use of virtual network switches and vlans allows me to keep my network segmented</li>
+                            </ul>
+                            <div style={{
+                                marginTop: "20px"}}>
                                 <a href="https://www.proxmox.com/en/proxmox-virtual-environment/overview" onMouseEnter={handleMouseEnter} 
                                     onMouseLeave={handleMouseLeave} style={{
                                     color: isHover ? 'blue' : 'DodgerBlue',
@@ -89,8 +106,14 @@ const proxmox: FC = memo(() => {
                                     Proxmox Virtual Environment Overview
                                 </a>
                             </div>
-                            <br/>
-                            <div>
+                            <h3 style={{
+                                textAlign: "left",
+                                fontSize: "1.5em",
+                                marginTop: "20px"}}>
+                                Heres a Picture:
+                            </h3>
+                            <div style={{
+                                marginTop: "20px"}}>
                                 <Image alt="Image" src={proxmoxImage} />
                             </div>
                         </div>
