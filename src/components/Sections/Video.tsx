@@ -41,7 +41,8 @@ const Hero: FC = memo(() => {
           color: 'white',
           fontSize: '1.25em', 
           fontWeight: 'bold',
-          paddingBottom: "20px"}}>{description}
+          paddingBottom: "20px"}}>
+          {description}
         </div>
         <div style={{
           width: width*.8,

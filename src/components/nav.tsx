@@ -25,6 +25,7 @@ const Nav: FC<Props> = memo(({projectsList: li, backgroundHeight: backgroundHeig
 
     return  <nav key={backgroundHeight} style={{
                 height: backgroundHeight,
+                minHeight: "740px",
                 transition: "all 0.5s ease",
                 width: window === false ? 60 : 255,
                 backgroundColor: "LightGray"}}>
