@@ -13,6 +13,8 @@ const nextConfig = {
       rule.include = undefined;
     });
 
+    
+
     return config;
   },
   compress: true,
