@@ -22,7 +22,7 @@
     "react-favicon": "^2.0.3",
     "sharp": "^0.32.6",
     "ts-pattern": "^5.0.4",
-    "yarn": "^1.22.19"
+    "yarn": "^1.22.21"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^13.4.12",

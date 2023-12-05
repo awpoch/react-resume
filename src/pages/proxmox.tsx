@@ -1,25 +1,24 @@
-/* eslint-disable react-memo/require-usememo */
 import Image from 'next/image'
 import {FC, memo, MutableRefObject, useEffect, useRef, useState} from 'react';
 import Favicon from "react-favicon";
 
 import Nav from '../components/nav';
+import backgroundImg from "../images/blueAbstract.jpg";
 import proxmoxImage from "../images/portfolio/Proxmox.png";
-import backgroundImg from "../images/stars.jpg";
 
 const proxmox: FC = memo(() => {
+
+    const project = "Proxmox";
     
-    const [navOpen, setNavOpen] = useState(false);
-    const childToParent = (childData: boolean | ((prevState: boolean) => boolean)) => { setNavOpen(childData);}
-    
-    const [bgHeight, setBgHeight] = useState(0);
-    const bgHeightRef = useRef() as MutableRefObject<HTMLDivElement>;
+    const [contentHeight, setContentHeight] = useState(0);
+    const contentRef = useRef() as MutableRefObject<HTMLDivElement>;
     
     useEffect(() => {
         function render() {
-            if(bgHeightRef.current !== null)
-                setBgHeight(bgHeightRef.current.clientHeight);
+            if(contentRef.current)
+                setContentHeight(contentRef.current.clientHeight);
         }
+        document.body.style.background = "gray";
         render();
         window.addEventListener('resize', render);
     }, []);
@@ -28,94 +27,85 @@ const proxmox: FC = memo(() => {
     const handleMouseEnter = () => { setIsHover(true); };
     const handleMouseLeave = () => { setIsHover(false); };
 
-    const projectsList = [
-        ["React Resume", "/logo.png", "https://github.com/awpoch/react-resume", "not selected"],
-        ["Tank Wars Game", "/TankWars.png", "https://github.com/awpoch/TankWars", "not selected"],
-        ["Endangered Animals Game", "/EndangeredAnimals.png", "https://github.com/awpoch/EndangeredAnimalsSlideGame.git", "not selected"],
-        ["Sprite Editor", "/SpriteEditor.png", "https://github.com/awpoch/Sprite-Editor", "not selected"],
-        ["Python Proxy", "/Proxy.png", "https://github.com/awpoch/PythonProxy", "not selected"],
-        ["Home Assistant", "/HomeAssistant.png", "homeAssistant", "not selected"],
-        ["pfSense", "/pfsense.png", "pfsense", "not selected"],
-        ["Proxmox", "/Proxmox.png", "proxmox", "selected"],
-        ["Home Security System", "/SecurityCamera.png", "securitySystem", "not selected"],
-        ["Home Office", "/HomeOffice.png", "homeOffice", "not selected"],
-        ["Electronics Lab", "/ElectronicsLab.png", "electronicsLab", "not selected"]        
-    ];
-
     return  <div style={{position: "static"}}>  
                 <Favicon url='/Proxmox.png' />
                 <div style={{
                     position: "absolute",
-                    overflow: "hidden"}}>
-                    <Nav backgroundHeight={bgHeight} childToParent={childToParent} projectsList={projectsList} />
+                    top: "0px",
+                    zIndex: "1"}}>
+                    <Nav contentHeight={contentHeight} currentProject={project} />
                 </div>
-                <div ref={bgHeightRef} style={{
+                <div style={{
+                    position: "fixed",
+                    top: "0px",
+                    left: "60px",
+                    right: "0px",
+                    height: "auto",
+                    width: "100vw"}}>
+                    <Image alt="Image" placeholder= "blur" priority src={backgroundImg} />  
+                    <Image alt="Image" placeholder= "blur" priority src={backgroundImg} />  
+                    <Image alt="Image" placeholder= "blur" priority src={backgroundImg} />  
+                </div>
+                <div ref={contentRef} style={{
                     position: "absolute",
-                    left: navOpen === false ? 60 : 275,
-                    transition: "all 0.5s ease"}}>
+                    top: "0px",
+                    left: "60px",
+                    right: "0px"}}>
                     <div style={{
-                        position: "relative"}}>
-                        <Image alt="Image" placeholder= "blur" priority src={backgroundImg} />  
-                    </div>
-                    <div style={{
-                        position: "absolute",
-                        top: "0px",
-                        left: "0px",
-                        right: "0px"}}>
+                        margin: "auto", 
+                        width: "75%",
+                        maxWidth: "1180px",
+                        textAlign: "center",
+                        color: "white"}}>
+                        <h1 style={{
+                            fontSize: "3em",
+                            marginTop: "20px"}}>
+                            Proxmox Virtual Environment
+                        </h1>
                         <div style={{
-                            margin: "auto", 
-                            width: "75%",
-                            maxWidth: "1180px",
-                            textAlign: "center",
-                            color: "white"}}>
-                            <h1 style={{
-                                fontSize: "3em",
-                                marginTop: "20px"}}>
-                                Proxmox Virtual Environment
-                            </h1>
-                            <div style={{
-                                marginTop: "20px"}}>
-                                I setup a home lab using proxmox to run all my home services. 
-                                With proxmox I'm able to virutalize my router/firewall with pfsense, 
-                                run home assistant for my all my smart home devices and automations,
-                                run Windows and Blue Iris for my Security System, and run Docker in 
-                                Linux for to create a Cloudflare tunnel. Below is a link to 
-                                a proxmox overview page and a picture of my setup.
-                            </div>
-                            <h2 style={{
-                                textAlign: "left",
-                                fontSize: "1.5em",
-                                marginTop: "20px"}}>
-                                More Information:
-                            </h2>
-                            <ul style={{
-                                listStyle: "disc",
-                                textAlign: "left",
-                                listStylePosition: "inside",
-                                marginTop: "20px"}}>
-                                <li>I can access all my services from one place, no need for hardware access</li>
-                                <li>I able to create clusers of computers to add additional system resources</li>
-                                <li>Use of virtual network switches and vlans allows me to keep my network segmented</li>
-                            </ul>
-                            <div style={{
-                                marginTop: "20px"}}>
-                                <a href="https://www.proxmox.com/en/proxmox-virtual-environment/overview" onMouseEnter={handleMouseEnter} 
-                                    onMouseLeave={handleMouseLeave} style={{
-                                    color: isHover ? 'blue' : 'DodgerBlue',
-                                    textDecoration: "underline"}}>
-                                    Proxmox Virtual Environment Overview
-                                </a>
-                            </div>
-                            <h3 style={{
-                                textAlign: "left",
-                                fontSize: "1.5em",
-                                marginTop: "20px"}}>
-                                Heres a Picture:
-                            </h3>
-                            <div style={{
-                                marginTop: "20px"}}>
-                                <Image alt="Image" src={proxmoxImage} />
-                            </div>
+                            marginTop: "20px"}}>
+                            I setup a home lab using proxmox to run all my home services. 
+                            With proxmox I'm able to virutalize my router/firewall with pfsense, 
+                            run home assistant for my all my smart home devices and automations,
+                            run Windows and Blue Iris for my Security System, and run Docker in 
+                            Linux for to create a Cloudflare tunnel. Below is a link to 
+                            a proxmox overview page and a picture of my setup.
+                        </div>
+                        <h2 style={{
+                            textAlign: "left",
+                            fontSize: "1.5em",
+                            marginTop: "20px"}}>
+                            More Information:
+                        </h2>
+                        <ul style={{
+                            listStyle: "disc",
+                            textAlign: "left",
+                            listStylePosition: "inside",
+                            marginTop: "20px"}}>
+                            <li>I can access all my services from one place, no need for hardware access</li>
+                            <li>I able to create clusers of computers to add additional system resources</li>
+                            <li>Use of virtual network switches and vlans allows me to keep my network segmented</li>
+                        </ul>
+                        <div style={{
+                            marginTop: "20px"}}>
+                            <a href="https://www.proxmox.com/en/proxmox-virtual-environment/overview" onMouseEnter={handleMouseEnter} 
+                                onMouseLeave={handleMouseLeave} style={{
+                                color: isHover ? 'saddlebrown' : 'orange',
+                                textDecoration: "underline",
+                                fontWeight: "bold"}}>
+                                Proxmox Virtual Environment Overview
+                            </a>
+                        </div>
+                        <h3 style={{
+                            textAlign: "left",
+                            fontSize: "1.5em",
+                            marginTop: "20px"}}>
+                            Heres a Picture:
+                        </h3>
+                        <div style={{
+                            marginTop: "20px",
+                            marginBottom: "20px"}}>
+                            <Image alt="Image" src={proxmoxImage} />
                         </div>
                     </div>
                 </div>
