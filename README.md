@@ -1,4 +1,4 @@
-# React Resume Website
+# React Portfolio Website
 
 This is a React based personal resume website. Built with typescript on the Next.js framework, styled with 
 Tailwind css. Even better, the site is fully mobile-optimized and server-side rendered to ensure fast 
