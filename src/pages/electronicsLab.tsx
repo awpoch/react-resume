@@ -77,7 +77,7 @@ const electronicsLab: FC = memo(() => {
                             textAlign: "left",
                             listStylePosition: "inside",
                             marginTop: "20px"}}>
-                            <li>Toolbox makes is easy to stay organized</li>
+                            <li>Large toolbox makes is easy to stay organized</li>
                             <li>Being able to lock up important valuables makes it easy to keep kids and visitors out</li>
                             <li>This setup makes for a great learning environment</li>
                         </ul>
