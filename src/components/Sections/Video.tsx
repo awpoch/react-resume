@@ -51,7 +51,7 @@ const Hero: FC = memo(() => {
           marginBottom: "40px"}}>
           <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; 
             web-share" allowFullScreen frameBorder="0" height="100%"
-            src="https://www.youtube.com/watch?v=v0FnmTTD3ek" title="YouTube video player" width="100%"/>
+            src="https://youtu.be/v0FnmTTD3ek?si=f9bCmRbkIKvSSlul" title="YouTube video player" width="100%"/>
         </div>
       </div>
     </Section>
