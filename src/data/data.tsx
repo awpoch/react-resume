@@ -71,8 +71,8 @@ export const heroData: Hero = {
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a student at <strong className="text-stone-100">University of Utah</strong> with 13 required and 15 elective credits remaining to get a Bachelor's Degree in Comupter Science. I'm currently looking
-        for an <strong className="text-stone-100">Internship</strong> or <strong className="text-stone-100">Job</strong> to gain relevant experiance in the field.
+        I'm a student at <strong className="text-stone-100">University of Utah</strong> with few remaining credits to get a Bachelor's Degree in Comupter Science. I'm currently looking
+        for an <strong className="text-stone-100">Internship</strong> to gain relevant experiance in the field.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
         In my free time time, you might catch me playing my <strong className="text-stone-100">Bass Guitar</strong>, camping and hiking all over 
