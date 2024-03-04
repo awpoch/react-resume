@@ -72,7 +72,7 @@ export const heroData: Hero = {
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
         I'm a student at <strong className="text-stone-100">University of Utah</strong> with few remaining credits to get a Bachelor's Degree in Comupter Science. I'm currently looking
-        for an <strong className="text-stone-100">Internship</strong> to gain relevant experiance in the field.
+        for a <strong className="text-stone-100">Job</strong> or an <strong className="text-stone-100">Internship</strong>.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
         In my free time time, you might catch me playing my <strong className="text-stone-100">Bass Guitar</strong>, camping and hiking all over 
