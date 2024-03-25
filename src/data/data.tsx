@@ -317,21 +317,23 @@ export const experience: TimelineItem[] = [
 export const testimonial: TestimonialSection = {
   imageSrc: background,
   testimonials: [
-    {
-      name: 'John Doe',
-      text: 'Personal quote here.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/169.jpg',
-    },
-    {
-      name: 'Jane Doe',
-      text: 'Personal quote here.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/14.jpg',
-    },
-    {
-      name: 'Someone else',
-      text: 'Personal quote here.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/69.jpg',
-    },
+    //To add section to nav bar add SectionId.Testimonials to navSections in Header.tsx
+
+    //{
+    //  name: 'John Doe',
+    //  text: 'Personal quote here.',
+    //  image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/169.jpg',
+    //},
+    //{
+    //  name: 'Jane Doe',
+    //  text: 'Personal quote here.',
+    //  image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/14.jpg',
+    //},
+    //{
+    //  name: 'Someone else',
+    //  text: 'Personal quote here.',
+    //  image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/69.jpg',
+    //},
   ],
 };
 

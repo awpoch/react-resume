@@ -17,7 +17,6 @@ const Page: NextPage<PropsWithChildren<HomepageMeta>> = memo(({children, title, 
         {/* Open Graph : https://ogp.me/ */}
         <meta content={title} property="og:title" />
         <meta content={description} property="og:description" />
-        <meta content={`https://main.d76wmfbrdkwqt.amplifyapp.com/${pathname}`} property="og:url" />
       </Head>
       {children}
     </>

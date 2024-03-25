@@ -44,7 +44,7 @@ export const useNavObserver = (selectors: string, handler: (section: SectionId |
       {
         root: null,
         threshold: 0.1,
-        rootMargin: '0px 0px -70% 0px',
+        rootMargin: '0px 0px -50% 0px',
       },
     );
     // Observe all the Sections

@@ -34,7 +34,7 @@ const Nav: FC<Props> = memo(({currentProject: currentProject, contentHeight: con
 
     const [window, setWindow] = useState(false);
 
-    // All variables are being used and assigned  dynamically!
+    // All variables are being used and assigned dynamically!
     const [isHoverReturn, setIsHoverReturn] = useState(false);
     const [isHover0, setIsHover0] = useState(false);
     const [isHover1, setIsHover1] = useState(false);
