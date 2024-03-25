@@ -42,7 +42,7 @@ import {
  */
 export const homePageMeta: HomepageMeta = {
   title: 'Austin\'s Web Portfolio',
-  description: "Austin Poch's react web portfolio",
+  description: "Austin Poch's React Web Portfolio",
 };
 
 /**
