@@ -1,5 +1,6 @@
 import dynamic from 'next/dynamic';
 import {FC, memo} from 'react';
+import Favicon from "react-favicon";
 
 import Page from '../components/Layout/Page';
 import About from '../components/Sections/About';
@@ -19,6 +20,7 @@ const Home: FC = memo(() => {
   const {title, description} = homePageMeta;
   return (
     <Page description={description} title={title}>
+      <Favicon url='/favicon.png' />
       <Header />
       <Hero />
       <About />
