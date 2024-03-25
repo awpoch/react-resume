@@ -105,7 +105,7 @@ export const aboutData: About = {
   to learn and work with a skilled team. I'm a problem solver, self starter, organized, and I'm easy to get along with.`,
   aboutItems: [
     {label: 'Location', text: 'Sandy, Utah', Icon: MapIcon},
-    {label: 'Nationality', text: 'American / White', Icon: FlagIcon},
+    {label: 'Nationality', text: 'American', Icon: FlagIcon},
     {label: 'Interests', text: 'Exciting activities, Good Food, Good People', Icon: SparklesIcon},
     {label: 'Studying at', text: 'University of Utah', Icon: AcademicCapIcon},
   ],
@@ -283,7 +283,7 @@ export const portfolioItems: PortfolioItem[] = [
  */
 export const education: TimelineItem[] = [
   {
-    date: 'September 2020 - December 2024 (Expected)',
+    date: 'September 2020 - May 2025 (Expected)',
     location: 'University of Utah',
     title: 'Bachelor\'s in Computer Science',
     content: <p>U of U was great for teaching a broad understanding computers, not just how to code. Things like networking, compilers, interpreters, algorithms, memory allocation, Boolean logic, and advanced math.</p>,
