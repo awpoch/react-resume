@@ -136,6 +136,10 @@ export const skills: SkillGroup[] = [
         name: 'MySQL/MariaDB',
         level: 4,
       },
+      {
+        name: 'Terraform',
+        level: 6,
+      },
     ],
   },
   {
@@ -150,12 +154,16 @@ export const skills: SkillGroup[] = [
         level: 9,
       },
       {
-        name: 'Git',
+        name: 'Git Version Control',
         level: 8,
       },
       {
         name: 'Docker/Docker Compose',
         level: 7,
+      },
+      {
+        name: 'Firewall Rules',
+        level: 8,
       },
     ],
   },
@@ -167,16 +175,8 @@ export const skills: SkillGroup[] = [
         level: 7,
       },
       {
-        name: 'Terraform',
-        level: 6,
-      },
-      {
         name: 'VMware/Proxmox',
         level: 7,
-      },
-      {
-        name: 'Firewalls',
-        level: 8,
       },
       {
         name: 'Wireshark',
