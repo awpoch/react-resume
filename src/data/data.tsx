@@ -67,7 +67,7 @@ export const heroData: Hero = {
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
         I'm a student at <strong className="text-stone-100">University of Utah</strong> with few remaining credits to
         get a Bachelor's Degree in Comupter Science. I'm currently looking for a
-        <strong className="text-stone-100"> full-time Job or internship</strong>.
+        <strong className="text-stone-100"> full-time job or internship</strong>.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
         In my free time time, you might catch me playing my bass guitar, camping and hiking all over Utah, fixing
