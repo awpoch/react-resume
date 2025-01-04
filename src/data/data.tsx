@@ -129,12 +129,12 @@ export const skills: SkillGroup[] = [
         level: 7,
       },
       {
-        name: 'React/Javascript/Typescript',
+        name: 'React/React Native/Javascript/Typescript',
         level: 7,
       },
       {
-        name: 'MySQL/MariaDB',
-        level: 4,
+        name: 'MySQL',
+        level: 6,
       },
       {
         name: 'Terraform',
@@ -209,7 +209,7 @@ export const skills: SkillGroup[] = [
 export const portfolioItems: PortfolioItem[] = [
   {
     title: 'Tank Wars Game',
-    description: 'I created an online multiplayer tank game with computer players using C#.',
+    description: 'I created an online multiplayer tank game with AI players using C#.',
     url: 'https://github.com/awpoch/TankWars',
     image: porfolioImage4,
   },
@@ -245,7 +245,7 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     title: 'Home Assistant',
-    description: 'I created a smart home with Home Assistant, Zwave and Zigbee.',
+    description: 'I created a smart home with Home Assistant, Zigbee, MQTT, and Node Red.',
     url: 'homeAssistant',
     image: porfolioImage6,
   },
