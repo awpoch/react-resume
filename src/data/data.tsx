@@ -15,6 +15,7 @@ import porfolioImage8 from '../images/portfolio/pfsense.png';
 import porfolioImage9 from '../images/portfolio/SecuritySystem.png';
 import porfolioImage10 from '../images/portfolio/HomeOffice.jpg';
 import porfolioImage11 from '../images/portfolio/ElectronicsLab.jpg';
+import porfolioImage12 from '../images/portfolio/AutomatedAutoCare.gif';
 import profilepic from '../images/ProfilePicture.jpg';
 import background from '../images/circuitBoard.jpg';
 import {
@@ -214,34 +215,10 @@ export const portfolioItems: PortfolioItem[] = [
     image: porfolioImage4,
   },
   {
-    title: 'Endangered Animal Slide Game!',
-    description: 'I created a slide game featuring endangerd animals using Qt and C++.',
-    url: 'https://github.com/awpoch/EndangeredAnimalsSlideGame.git',
-    image: porfolioImage1,
-  },
-  {
-    title: 'Home Security System',
-    description: 'I setup a home security system using Blue Iris and multiple cameras.',
-    url: 'securitySystem',
-    image: porfolioImage9,
-  },
-  {
-    title: 'Sprite Editor',
-    description: 'I created a multi-frame sprite image editor using Qt and C++.',
-    url: 'https://github.com/awpoch/Sprite-Editor',
-    image: porfolioImage2,
-  },
-  {
-    title: 'React Portfolio',
-    description: 'I created this react protfolio website showcasing myself and my acomplishments.',
-    url: 'https://github.com/awpoch/react-resume',
-    image: porfolioImage5,
-  },
-  {
-    title: 'Python Proxy',
-    description: 'I created 3 python scripts, a client, a proxy, and server.',
-    url: 'https://github.com/awpoch/PythonProxy',
-    image: porfolioImage3,
+    title: 'Proxmox',
+    description: 'I setup a virtual environment with Proxmox to run all of my home services.',
+    url: 'proxmox',
+    image: porfolioImage7,
   },
   {
     title: 'Home Assistant',
@@ -250,24 +227,55 @@ export const portfolioItems: PortfolioItem[] = [
     image: porfolioImage6,
   },
   {
-    title: 'PfSense',
+    title: 'Automated Auto Care',
     description:
-      'I setup a firewall and router for home use which uses multiple subnets to seperate untrusted devices on my network.',
-    url: 'pfsense',
-    image: porfolioImage8,
+      'I created a full stack mobile application using React Native, NodeJS, MySQL, Terraform and Amazon Web Services. It uses google oAuth for authentication, has a fully functional backend REST API, and sends notifications using Firebase! This is still a work in progress.',
+    url: 'https://grider1.github.io/aacweb/',
+    image: porfolioImage12,
   },
 
   {
-    title: 'Proxmox',
-    description: 'I setup a virtual environment with Proxmox to run all of my home services.',
-    url: 'proxmox',
-    image: porfolioImage7,
+    title: 'React Portfolio',
+    description: 'I created this react protfolio website showcasing myself and my acomplishments.',
+    url: 'https://github.com/awpoch/react-resume',
+    image: porfolioImage5,
+  },
+  {
+    title: 'Sprite Editor',
+    description: 'I created a multi-frame sprite image editor using Qt and C++.',
+    url: 'https://github.com/awpoch/Sprite-Editor',
+    image: porfolioImage2,
+  },
+  {
+    title: 'Python Proxy',
+    description: 'I created 3 python scripts, a client, a proxy, and server.',
+    url: 'https://github.com/awpoch/PythonProxy',
+    image: porfolioImage3,
+  },
+  {
+    title: 'Home Security System',
+    description: 'I setup a home security system using Blue Iris and multiple cameras.',
+    url: 'securitySystem',
+    image: porfolioImage9,
   },
   {
     title: 'Home Office',
     description: 'I setup a comfortable home office to make working from home much easier.',
     url: 'homeOffice',
     image: porfolioImage10,
+  },
+  {
+    title: 'Endangered Animal Slide Game!',
+    description: 'I created a slide game featuring endangerd animals using Qt and C++.',
+    url: 'https://github.com/awpoch/EndangeredAnimalsSlideGame.git',
+    image: porfolioImage1,
+  },
+  {
+    title: 'PfSense',
+    description:
+      'I setup a firewall and router for home use which uses multiple subnets to seperate untrusted devices on my network.',
+    url: 'pfsense',
+    image: porfolioImage8,
   },
   {
     title: 'Electronics Lab',
