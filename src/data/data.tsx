@@ -15,12 +15,10 @@ import porfolioImage13 from "../images/portfolio/DrawingApp.gif";
 import porfolioImage11 from "../images/portfolio/ElectronicsLab.jpg";
 import porfolioImage1 from "../images/portfolio/EndangeredAnimalsAnimation.gif";
 import porfolioImage6 from "../images/portfolio/HomeAssistant.png";
-import porfolioImage10 from "../images/portfolio/HomeOffice.jpg";
 import porfolioImage8 from "../images/portfolio/pfsense.png";
 import porfolioImage7 from "../images/portfolio/Proxmox.png";
 import porfolioImage3 from "../images/portfolio/PythonProxy.png";
 import porfolioImage5 from "../images/portfolio/ReactResume.png";
-import porfolioImage9 from "../images/portfolio/SecuritySystem.png";
 import porfolioImage2 from "../images/portfolio/SpriteEditorAnimation.gif";
 import porfolioImage4 from "../images/portfolio/TankWarsAnimation.gif";
 import profilepic from "../images/ProfilePicture.jpg";
@@ -67,37 +65,37 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
  * Hero section
  */
 export const heroData: Hero = {
-  imageSrc: heroImage,
-  name: `Austin Poch`,
-  description: (
-    <>
-      <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        {`I'm a student at `}
-        <strong className="text-stone-100">University of Utah</strong> with few
-        {`remaining credits to get a Bachelor's Degree in Computer Science. I'm
+	imageSrc: heroImage,
+	name: `Austin Poch`,
+	description: (
+		<>
+			<p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
+				{`I'm a student at `}
+				<strong className="text-stone-100">University of Utah</strong> with
+				{`one remaining class to get a Bachelor's Degree in Computer Science. I'm
         currently looking for a `}
-        <strong className="text-stone-100">full-time job or internship</strong>
-        {`.`}
-      </p>
-      <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time, you might catch me playing my bass guitar, camping and
-        hiking all over Utah, fixing electronics, and working on cars.
-      </p>
-    </>
-  ),
-  actions: [
-    {
-      href: "Resume.pdf",
-      text: "Resume PDF",
-      primary: true,
-      Icon: ArrowDownTrayIcon,
-    },
-    {
-      href: `#${SectionId.Contact}`,
-      text: "Contact",
-      primary: false,
-    },
-  ],
+				<strong className="text-stone-100">full-time job or internship</strong>
+				{`.`}
+			</p>
+			<p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
+				In my free time, you might catch me playing my bass guitar, fixing electronics, working on cars, camping
+				and hiking all over Utah, or spending time with family and friends.
+			</p>
+		</>
+	),
+	actions: [
+		{
+			href: "Resume.pdf",
+			text: "Resume PDF",
+			primary: true,
+			Icon: ArrowDownTrayIcon,
+		},
+		{
+			href: `#${SectionId.Contact}`,
+			text: "Contact",
+			primary: false,
+		},
+	],
 };
 
 /**
@@ -189,186 +187,120 @@ export const experience: TimelineItem[] = [
  * Skills section
  */
 export const skills: SkillGroup[] = [
-  {
-    name: "Languages, Frameworks, and Libraries",
-    skills: [
-      {
-        name: "C/C++/C#/Java",
-        level: 9,
-      },
-      {
-        name: "Python/PHP/Node.js",
-        level: 7,
-      },
-      {
-        name: "React/React Native/Javascript/Typescript",
-        level: 7,
-      },
-      {
-        name: "MySQL",
-        level: 6,
-      },
-      {
-        name: "Terraform",
-        level: 6,
-      },
-    ],
-  },
-  {
-    name: "Development Tools",
-    skills: [
-      {
-        name: "VS Code",
-        level: 10,
-      },
-      {
-        name: "Linux CLI",
-        level: 9,
-      },
-      {
-        name: "Git Version Control",
-        level: 8,
-      },
-      {
-        name: "Docker/Docker Compose",
-        level: 7,
-      },
-      {
-        name: "Firewall Rules",
-        level: 8,
-      },
-    ],
-  },
-  {
-    name: "Platforms and Networking Tools",
-    skills: [
-      {
-        name: "Amazon Web Services",
-        level: 7,
-      },
-      {
-        name: "VMware/Proxmox",
-        level: 7,
-      },
-      {
-        name: "Wireshark",
-        level: 7,
-      },
-      {
-        name: "Smart Home (Home Assistant/MQTT/Node Red)",
-        level: 8,
-      },
-    ],
-  },
-  {
-    name: "Spoken languages",
-    skills: [
-      {
-        name: "English",
-        level: 10,
-      },
-      {
-        name: "Spanish",
-        level: 2,
-      },
-    ],
-  },
+	{
+		name: "Languages, Frameworks, and Libraries",
+		skills: [
+			{ name: "C, C++, C#", level: 8 },
+			{ name: "Kotlin (Mobile)", level: 7 },
+			{ name: "React, React Native, Next.js, Node.js", level: 9 },
+			{ name: "Javascript, Typescript, HTML, CSS, JSON", level: 8 },
+			{ name: "Rest APIs, MySQL, Express.js Prisma ORM", level: 8 },
+		],
+	},
+	{
+		name: "Development Tools",
+		skills: [
+			{ name: "Linux & Windows CLIs", level: 8 },
+			{ name: "VS Code", level: 10 },
+			{ name: "Git Version Control", level: 8 },
+			{ name: "Docker, Docker Compose", level: 9 },
+			{ name: "CI/CD Pipelines", level: 7 },
+		],
+	},
+	{
+		name: "Platforms and Networking Tools",
+		skills: [
+			{ name: "Amazon Web Services & Terraform", level: 7 },
+			{ name: "DNS, Certificates, and Nginx", level: 8 },
+			{ name: "VMware's ESXi & Proxmox (Virtualization)", level: 8 },
+			{ name: "Home Assiatant Automations, MQTT, Node Red", level: 8 },
+			{ name: "Subnetting, CIDR Notation, Wireshark, Nmap, Traceroute", level: 9 },
+		],
+	},
+	{
+		name: "Personal Strengths",
+		skills: [
+			{ name: "Communication", level: 9 },
+			{ name: "Problem Solving", level: 9 },
+			{ name: "Dedication & Reliability", level: 9 },
+			{ name: "Team Collaboration", level: 9 },
+			{ name: "People Skills", level: 9 },
+		],
+	},
 ];
 
 /**
  * Portfolio section
  */
 export const portfolioItems: PortfolioItem[] = [
-  {
-    title: "Automated Auto Care",
-    description:
-      "I created a full stack mobile application using React Native, NodeJS, MySQL, Terraform and Amazon Web Services. It uses google oAuth for authentication, has a fully functional backend REST API, and sends notifications using Firebase! This is still a work in progress.",
-    url: "https://grider1.github.io/aacweb/",
-    image: porfolioImage12,
-  },
-  {
-    title: "React Portfolio",
-    description:
-      "I created this react protfolio website showcasing myself and my accomplishments.",
-    url: "https://github.com/awpoch/react-resume",
-    image: porfolioImage5,
-  },
-  {
-    title: "Proxmox",
-    description:
-      "I setup a virtual environment with Proxmox to run all of my home services.",
-    url: "/proxmox",
-    image: porfolioImage7,
-  },
-  {
-    title: "Tank Wars Game",
-    description:
-      "I created an online multiplayer tank game with AI players using C#.",
-    url: "https://github.com/awpoch/TankWars",
-    image: porfolioImage4,
-  },
-  {
-    title: "Home Assistant",
-    description:
-      "I created a smart home with Home Assistant, Zigbee, MQTT, and Node Red.",
-    url: "/homeAssistant",
-    image: porfolioImage6,
-  },
-  {
-    title: "Home Office",
-    description:
-      "I setup a comfortable home office to make working from home much easier.",
-    url: "/homeOffice",
-    image: porfolioImage10,
-  },
-  {
-    title: "Drawing App",
-    description: "description.",
-    url: "/electronicsLab",
-    image: porfolioImage13,
-  },
-  {
-    title: "Endangered Animal Slide Game!",
-    description:
-      "I created a slide game featuring endangered animals using Qt and C++.",
-    url: "https://github.com/awpoch/EndangeredAnimalsSlideGame.git",
-    image: porfolioImage1,
-  },
-  {
-    title: "Sprite Editor",
-    description:
-      "I created a multi-frame sprite image editor using Qt and C++.",
-    url: "https://github.com/awpoch/Sprite-Editor",
-    image: porfolioImage2,
-  },
-
-  {
-    title: "PfSense",
-    description:
-      "I setup a firewall and router for home use which uses multiple subnets to seperate untrusted devices on my network.",
-    url: "/pfsense",
-    image: porfolioImage8,
-  },
-  {
-    title: "Electronics Lab",
-    description:
-      "I setup an electronics repair lab in my office for ease of access and functionality.",
-    url: "/electronicsLab",
-    image: porfolioImage11,
-  },
-  {
-    title: "Python Proxy",
-    description: "I created 3 python scripts, a client, a proxy, and server.",
-    url: "https://github.com/awpoch/PythonProxy",
-    image: porfolioImage3,
-  },
-  {
-    title: "Home Security System",
-    description:
-      "I setup a home security system using Blue Iris and multiple cameras.",
-    url: "/securitySystem",
-    image: porfolioImage9,
-  },
+	{
+		title: "React Portfolio",
+		description: "I created this react protfolio website showcasing myself and my accomplishments.",
+		url: "https://github.com/awpoch/react-resume",
+		image: porfolioImage5,
+	},
+	{
+		title: "Endangered Animal Slide Game!",
+		description: "I created a slide game featuring endangered animals using Qt and C++.",
+		url: "https://github.com/awpoch/EndangeredAnimalsSlideGame.git",
+		image: porfolioImage1,
+	},
+	{
+		title: "Home Assistant",
+		description: "I created a smart home with Home Assistant, Zigbee, MQTT, and Node Red.",
+		url: "/homeAssistant",
+		image: porfolioImage6,
+	},
+	{
+		title: "Automated Auto Care",
+		description:
+			"I created a full stack mobile application using React Native, NodeJS, MySQL, Terraform and Amazon Web Services. It uses google oAuth for authentication, has a fully functional backend REST API, and sends notifications using Firebase! This is still a work in progress.",
+		url: "https://grider1.github.io/aacweb/",
+		image: porfolioImage12,
+	},
+	{
+		title: "Sprite Editor",
+		description: "I created a multi-frame sprite image editor using Qt and C++.",
+		url: "https://github.com/awpoch/Sprite-Editor",
+		image: porfolioImage2,
+	},
+	{
+		title: "Proxmox",
+		description: "I setup a virtual environment with Proxmox to run all of my home services.",
+		url: "/proxmox",
+		image: porfolioImage7,
+	},
+	{
+		title: "Tank Wars Game",
+		description: "I created an online multiplayer tank game with AI players using C#.",
+		url: "https://github.com/awpoch/TankWars",
+		image: porfolioImage4,
+	},
+	{
+		title: "Drawing App",
+		description: "description.",
+		url: "/electronicsLab",
+		image: porfolioImage13,
+	},
+	{
+		title: "PfSense",
+		description:
+			"I setup a firewall and router for home use which uses multiple subnets to seperate untrusted devices on my network.",
+		url: "/pfsense",
+		image: porfolioImage8,
+	},
+	{
+		title: "Python Proxy",
+		description: "I created 3 python scripts, a client, a proxy, and server.",
+		url: "https://github.com/awpoch/PythonProxy",
+		image: porfolioImage3,
+	},
+	{
+		title: "Electronics Lab",
+		description: "I setup an electronics repair lab in my office for ease of access and functionality.",
+		url: "/electronicsLab",
+		image: porfolioImage11,
+	},
 ];
 
 /**
@@ -377,7 +309,6 @@ export const portfolioItems: PortfolioItem[] = [
 export const testimonial: TestimonialSection = {
   imageSrc: background,
   testimonials: [
-    //To add section to nav bar add SectionId.Testimonials to navSections in Header.tsx
     {
       name: "Tracy Evans - Sorenson Communications Manager",
       text: "You are absolutely amazing and were everything we could have hoped for in an intern. While I am very sad to see you go, I wish you only the best as you work to complete your schooling.",
