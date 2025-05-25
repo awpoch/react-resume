@@ -98,7 +98,7 @@ export const Testimonials: FC = memo(() => {
                 }
             >
                 <h2 className="z-10 text-white text-heading font-bold text-center mb-8">
-                    Testamonials
+                    What people are saying
                 </h2>
 
                 <div className="z-10 w-full max-w-screen-md px-4 lg:px-0">
