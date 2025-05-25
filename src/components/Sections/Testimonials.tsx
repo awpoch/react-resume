@@ -57,7 +57,7 @@ export const Testimonials: FC = memo(() => {
 
     const setTestimonial = useCallback(
         (index: number) => () => {
-            if (scrollContainer !== null && scrollContainer.current !== null) {
+            if (scrollContainer.current) {
                 scrollContainer.current.scrollLeft = itemWidth.current * index;
             }
         },
@@ -102,24 +102,31 @@ export const Testimonials: FC = memo(() => {
                 </h2>
 
                 <div className="z-10 w-full max-w-screen-md px-4 lg:px-0">
-                    <div className="flex flex-col items-center gap-y-6 rounded-xl bg-cyan-800/60 p-6 shadow-lg overflow-visible">
+                    <div className="flex flex-col items-center gap-y-6 rounded-xl bg-cyan-800/60 p-6 shadow-lg">
                         <div
-                            className="no-scrollbar flex w-full touch-pan-x snap-x snap-mandatory gap-x-6 overflow-x-auto overflow-y-visible scroll-smooth"
+                            className="no-scrollbar flex w-full snap-x snap-mandatory overflow-x-auto scroll-smooth"
                             onScroll={handleScroll}
                             ref={scrollContainer}
+                            style={{
+                                WebkitOverflowScrolling: "touch",
+                            }}
                         >
                             {testimonials.map((testimonial, index) => {
                                 const isActive = index === activeIndex;
                                 return (
-                                    <TestimonialCard
-                                        isActive={isActive}
+                                    <div
                                         key={`${testimonial.name}-${index}`}
-                                        testimonial={testimonial}
-                                    />
+                                        className="shrink-0 w-full snap-start snap-always px-3"
+                                    >
+                                        <TestimonialCard
+                                            isActive={isActive}
+                                            testimonial={testimonial}
+                                        />
+                                    </div>
                                 );
                             })}
                         </div>
-                        <div className="flex gap-x-4">
+                        <div className="flex gap-x-4 mt-4">
                             {[...Array(testimonials.length)].map((_, index) => {
                                 const isActive = index === activeIndex;
                                 return (
@@ -158,12 +165,11 @@ export const TestimonialCard: FC<{
     return (
         <div
             className={classNames(
-                "flex w-full shrink-0 snap-start snap-always p-2 transition-opacity duration-1000",
+                "flex flex-col sm:flex-row w-full shrink-0 snap-start snap-always p-2 transition-opacity duration-1000",
                 isActive ? "opacity-100" : "opacity-0",
-                "items-start gap-x-6"
+                "items-center sm:items-start gap-y-4 sm:gap-x-6"
             )}
         >
-            {/* Image + Opening Quote */}
             <div
                 className={classNames(
                     "flex items-start gap-x-4 shrink-0",
@@ -178,31 +184,23 @@ export const TestimonialCard: FC<{
                             fill
                             className="object-cover rounded-full"
                             onError={() => setImageError(true)}
+                            draggable={false}
                         />
                     </div>
                 )}
             </div>
 
-            {/* Quote Text Block */}
             <div
                 className={classNames(
                     "flex flex-col gap-y-4 text-white",
                     hideImage && "items-center text-center"
                 )}
             >
-                {/* Combined Quote Container */}
                 <div className="flex items-start gap-x-3 sm:gap-x-4 md:gap-x-5 max-w-full justify-start">
-                    {/* Opening Quote */}
                     <QuoteIcon className="h-6 w-6 text-white stroke-black flex-shrink-0" />
-
-                    {/* Quote Text */}
                     <p className="text-body italic font-medium">{text}</p>
-
-                    {/* Closing Quote */}
                     <QuoteIcon className="h-6 w-6 text-white stroke-black rotate-180 flex-shrink-0 self-end" />
                 </div>
-
-                {/* Name */}
                 <p className="text-label lg:text-lg italic">-- {name}</p>
             </div>
         </div>

@@ -22,6 +22,7 @@ import reactResume from "../images/portfolio/ReactResume.png";
 import spriteEditor from "../images/portfolio/SpriteEditorAnimation.gif";
 import tankWars from "../images/portfolio/TankWarsAnimation.gif";
 import profilePic from "../images/ProfilePicture.jpg";
+import richardGhersi from "../images/richardGhersi.jpg";
 import {
     About,
     ContactSection,
@@ -360,7 +361,7 @@ export const testimonial: TestimonialSection = {
         {
             name: "Richard Ghersi - Sorenson Communications Manager",
             text: "Thank you so much for being a part of our team! Your hard work and dedication have not gone unnoticed.",
-            image: undefined,
+            image: richardGhersi,
         },
     ],
 };
