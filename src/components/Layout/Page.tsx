@@ -7,18 +7,19 @@ import { HomepageMeta } from "../../data/types";
 const Page: NextPage<PropsWithChildren<HomepageMeta>> = memo(
   ({ children, title, description }) => {
     return (
-      <>
-        <Head>
-          <title>{title}</title>
-          <meta content={description} name="description" />
+		<>
+			<Head>
+				<title>{title}</title>
+				<meta content={description} name="description" />
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-          {/* Open Graph : https://ogp.me/ */}
-          <meta content={title} property="og:title" />
-          <meta content={description} property="og:description" />
-        </Head>
-        {children}
-      </>
-    );
+				{/* Open Graph : https://ogp.me/ */}
+				<meta content={title} property="og:title" />
+				<meta content={description} property="og:description" />
+			</Head>
+			{children}
+		</>
+	);
   },
 );
 
