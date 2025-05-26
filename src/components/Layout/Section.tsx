@@ -13,7 +13,7 @@ const Section: FC<
 > = memo(({ children, sectionId, noPadding = false, className, style }) => {
     return (
         <section
-            id={`section-${sectionId}`} // ✅ Required for scroll tracking
+            id={`section-${sectionId}`} // Required for scroll tracking
             data-observe
             className={classNames(className, {
                 "px-4 py-16 md:py-24 lg:px-8": !noPadding,
