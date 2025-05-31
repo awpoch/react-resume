@@ -108,7 +108,7 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
     profileImageSrc: profilePic,
-    description: `I'm One elective class away from a Computer Science Degree at the University of Utah and am looking for a full-time opportunity
+    description: `I'm one elective class away from a Computer Science Degree at the University of Utah and am looking for a full-time opportunity
   where I can learn and work with a skilled team. I'm a problem solver, self starter, organized, and I'm easy to get along with.`,
     aboutItems: [
         { label: "Location", text: "Sandy, Utah", Icon: MapIcon },
@@ -162,29 +162,31 @@ export const education: TimelineItem[] = [
  * Work
  */
 export const experience: TimelineItem[] = [
-	{
-		date: "May 2024 - Dec 2024",
-		location: "Sorenson Communications",
-		title: "Network Operations Center Intern",
-		content: (
-			<p>
-				Sorenson provides video to telephone interpretive services for the deaf. I monitored and
-				maintained their on-prem/cloud infrastructure, tested their apps/services, and facilitated incident
-				management.
-			</p>
-		),
-	},
-	{
-		date: "July 2016 - March 2018",
-		location: "Romac Services",
-		title: "Team Member, then Crew Chief",
-		content: (
-			<p>
-				Romac performed multiple tasks for local businesses. I directed a team of associates 
-                fixing various mechanical and industrial equipment.
-			</p>
-		),
-	},
+    {
+        date: "May 2024 - Dec 2024",
+        location: "Sorenson Communications",
+        title: "Network Operations Center Intern",
+        content: (
+            <p>
+                Sorenson provides video to telephone interpretive services for
+                the deaf. I monitored and maintained their on-prem/cloud
+                infrastructure, tested their apps/services, and facilitated
+                incident management.
+            </p>
+        ),
+    },
+    {
+        date: "July 2016 - March 2018",
+        location: "Romac Services",
+        title: "Team Member, then Crew Chief",
+        content: (
+            <p>
+                Romac performed multiple tasks for local businesses. I directed
+                a team of associates fixing various mechanical and industrial
+                equipment.
+            </p>
+        ),
+    },
 ];
 
 /**
@@ -240,68 +242,67 @@ export const skills: SkillGroup[] = [
  * Portfolio section
  */
 export const portfolioItems: ProjectItem[] = [
-	{
-		title: "React Portfolio",
-		description: `I created THIS web portfolio using React, TypeScript, Next.js, and tailwind. I use it to showcase my skills and experience. It's fully responsive and hosted on AWS. It features a clean modern UI, easy navigation, and custom animations. This site serves as a personal branding tool and a central hub for everything I’m building.`,
-		url: undefined,
-		image: reactResume,
-	},
-	{
-		title: "Automated Auto Care",
-		description: `A full-stack mobile app built using React Native, Node.js, MySQL, Firebase, and AWS. It provides car owners automated maintenance tracking and reminders. It utalizes Google OAuth for login, a custom backend REST API, and push notifications. To simplify development, the infrastructure is provisioned with Terraform and there is a CI/CD pipeline. This is still a work in progress, but the foundation is solid and could easily scale.`,
-		url: "https://grider1.github.io/aacweb/",
-		image: automatedAutoCare,
-	},
-	{
-		title: "Tank Wars Game",
-		description: `An online multiplayer tank game developed in C# with support for both human and AI-controlled players. Players navigate a battlefield with real-time action and competitive mechanics. Built with a focus on game logic, collision detection, and multiplayer networking.`,
-		url: "https://github.com/awpoch/TankWars",
-		image: tankWars,
-	},
-	{
-		title: "Drawing App",
-		description: `An Android app built with Kotlin and Jetpack Compose. Users can create accounts, log in securely, and draw on a canvas. Drawings are saved to a backend server, and users can view and engage with a community feed. Authentication is JWT-based, and the app demonstrates full integration with backend storage and user-generated content.`,
-		url: undefined,
-		image: drawingApp,
-	},
-	{
-		title: "Endangered Animal Slide Game",
-		description: `A slide puzzle game built with C++/Qt that features endangered animals. The game’s goal is to raise awareness while providing a fun and educational challenge. Each puzzle piece features an image of an endangered species. The image gets scrambled, and the player must slide the pieces around to restore the original image.`,
-		url: undefined,
-		image: endangeredAnimals,
-	},
-	{
-		title: "Home Assistant",
-		description: `I built a complete smart home setup using Home Assistant, Zigbee, Z-Wave, MQTT, and Node-RED. Devices are controlled remotely using a WireGuard VPN. I’ve automated lighting, climate control, and security with custom flows. Everything runs on a locally hosted Home Assistant instance, giving me total control and privacy.`,
-		url: undefined,
-		image: homeAssistant,
-	},
-	{
-		title: "Home Lab",
-		description: `I built a home lab and I use Proxmox to run multiple virtural machines and containers. I also configured a secure network utilizing smart firewall rules, VLANs, local DNS, custom domains, and valid certificates for a fully-featured, enterprise-style lab.`,
-		url: undefined,
-		image: proxmox,
-	},
-	{
-		title: "Sprite Editor",
-		description: `I created this C++/Qt application to allows users to create and manage animated images for 2D games. You can create frame-by-frame animations and export them when you're done. I built it to learn about graphics manipulation, user input handling, and real-time rendering techniques.`,
-		url: "https://github.com/awpoch/Sprite-Editor",
-		image: spriteEditor,
-	},
-	{
-		title: "Python Proxy",
-		description: `A network project involving three Python scripts: a client, a proxy, and a server. The proxy intercepts traffic, allowing for debugging, logging, or modifying requests. This project helped deepen my understanding of sockets, data streams, and TCP/IP communication.`,
-		url: "https://github.com/awpoch/PythonProxy",
-		image: pythonProxy,
-	},
-	{
-		title: "Home Office & Electronics Lab",
-		description: `I built a dual-purpose space that serves as both a high-performance home office and a fully functional electronics lab. The office features a motorized sit/stand desk, clean cable management, and a hidden PC tower for a minimal aesthetic. On the lab side, I’ve got a soldering station, oscilloscope, custom PCB tools, and a large tool chest stocked for repairs and prototyping. I regularly design and assemble LED lighting systems and small-scale electronics projects, all from a space that’s optimized for focus, comfort, and hands-on learning.`,
-		url: undefined,
-		image: homeOffice,
-	},
+    {
+        title: "React Portfolio",
+        description: `I created THIS web portfolio using React, TypeScript, Next.js, and tailwind. I use it to showcase my skills and experience. It's fully responsive and hosted on AWS. It features a clean modern UI, easy navigation, and custom animations. This site serves as a personal branding tool and a central hub for everything I’m building.`,
+        url: undefined,
+        image: reactResume,
+    },
+    {
+        title: "Automated Auto Care",
+        description: `A full-stack mobile app built using React Native, Node.js, MySQL, Firebase, and AWS. It provides car owners automated maintenance tracking and reminders. It utalizes Google OAuth for login, a custom backend REST API, and push notifications. To simplify development, the infrastructure is provisioned with Terraform and there is a CI/CD pipeline. This is still a work in progress, but the foundation is solid and could easily scale.`,
+        url: "https://grider1.github.io/aacweb/",
+        image: automatedAutoCare,
+    },
+    {
+        title: "Tank Wars Game",
+        description: `An online multiplayer tank game developed in C# with support for both human and AI-controlled players. Players navigate a battlefield with real-time action and competitive mechanics. Built with a focus on game logic, collision detection, and multiplayer networking.`,
+        url: "https://github.com/awpoch/TankWars",
+        image: tankWars,
+    },
+    {
+        title: "Drawing App",
+        description: `An Android app built with Kotlin and Jetpack Compose. Users can create accounts, log in securely, and draw on a canvas. Drawings are saved to a backend server, and users can view and engage with a community feed. Authentication is JWT-based, and the app demonstrates full integration with backend storage and user-generated content.`,
+        url: undefined,
+        image: drawingApp,
+    },
+    {
+        title: "Endangered Animal Slide Game",
+        description: `A slide puzzle game built with C++/Qt that features endangered animals. The game’s goal is to raise awareness while providing a fun and educational challenge. Each puzzle piece features an image of an endangered species. The image gets scrambled, and the player must slide the pieces around to restore the original image.`,
+        url: undefined,
+        image: endangeredAnimals,
+    },
+    {
+        title: "Home Assistant",
+        description: `I built a complete smart home setup using Home Assistant, Zigbee, Z-Wave, MQTT, and Node-RED. Devices are controlled remotely using a WireGuard VPN. I’ve automated lighting, climate control, and security with custom flows. Everything runs on a locally hosted Home Assistant instance, giving me total control and privacy.`,
+        url: undefined,
+        image: homeAssistant,
+    },
+    {
+        title: "Home Lab",
+        description: `I built a home lab and I use Proxmox to run multiple virtural machines and containers. I also configured a secure network utilizing smart firewall rules, VLANs, local DNS, custom domains, and valid certificates for a fully-featured, enterprise-style lab.`,
+        url: undefined,
+        image: proxmox,
+    },
+    {
+        title: "Sprite Editor",
+        description: `I created this C++/Qt application to allows users to create and manage animated images for 2D games. You can create frame-by-frame animations and export them when you're done. I built it to learn about graphics manipulation, user input handling, and real-time rendering techniques.`,
+        url: "https://github.com/awpoch/Sprite-Editor",
+        image: spriteEditor,
+    },
+    {
+        title: "Python Proxy",
+        description: `A network project involving three Python scripts: a client, a proxy, and a server. The proxy intercepts traffic, allowing for debugging, logging, or modifying requests. This project helped deepen my understanding of sockets, data streams, and TCP/IP communication.`,
+        url: "https://github.com/awpoch/PythonProxy",
+        image: pythonProxy,
+    },
+    {
+        title: "Home Office & Electronics Lab",
+        description: `I built a dual-purpose space that serves as both a high-performance home office and a fully functional electronics lab. The office features a motorized sit/stand desk, clean cable management, and a hidden PC tower for a minimal aesthetic. On the lab side, I’ve got a soldering station, oscilloscope, custom PCB tools, and a large tool chest stocked for repairs and prototyping. I regularly design and assemble LED lighting systems and small-scale electronics projects, all from a space that’s optimized for focus, comfort, and hands-on learning.`,
+        url: undefined,
+        image: homeOffice,
+    },
 ];
-
 
 /**
  * Testimonial section
