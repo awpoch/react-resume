@@ -13,16 +13,15 @@ import heroImage from "../images/Delicate.jpg";
 import automatedAutoCare from "../images/portfolio/AutomatedAutoCare.gif";
 import drawingApp from "../images/portfolio/DrawingApp.gif";
 import electronicsLab from "../images/portfolio/ElectronicsLab.jpg";
+import homeOffice from "../images/portfolio/HomeOffice.jpg";
 import endangeredAnimals from "../images/portfolio/EndangeredAnimalsAnimation.gif";
 import homeAssistant from "../images/portfolio/HomeAssistant.png";
-import pfsense from "../images/portfolio/pfsense.png";
 import proxmox from "../images/portfolio/Proxmox.png";
 import pythonProxy from "../images/portfolio/PythonProxy.png";
 import reactResume from "../images/portfolio/ReactResume.png";
 import spriteEditor from "../images/portfolio/SpriteEditorAnimation.gif";
 import tankWars from "../images/portfolio/TankWarsAnimation.gif";
 import profilePic from "../images/ProfilePicture.jpg";
-import richardGhersi from "../images/richardGhersi.jpg";
 import {
     About,
     ContactSection,
@@ -109,8 +108,8 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
     profileImageSrc: profilePic,
-    description: `I'm finishing up a Computer Science Degree at the University of Utah and am looking for a full-time opportunity
-  to learn and work with a skilled team. I'm a problem solver, self starter, organized, and I'm easy to get along with.`,
+    description: `I'm One elective class away from a Computer Science Degree at the University of Utah and am looking for a full-time opportunity
+  where I can learn and work with a skilled team. I'm a problem solver, self starter, organized, and I'm easy to get along with.`,
     aboutItems: [
         { label: "Location", text: "Sandy, Utah", Icon: MapIcon },
         { label: "Nationality", text: "American", Icon: FlagIcon },
@@ -132,14 +131,14 @@ export const aboutData: About = {
  */
 export const education: TimelineItem[] = [
     {
-        date: "September 2020 - May 2025 (Expected)",
+        date: "September 2020 - December 2025 (Expected)",
         location: "University of Utah",
         title: "Bachelor's in Computer Science",
         content: (
             <p>
                 U of U has been great for teaching a broad understanding
                 computers, not just how to code. Things like networking,
-                compilers, interpreters, algorithms, memory allocation, Boolean
+                compilers, interpreters, algorithms, memory allocation, boolean
                 logic, and advanced math.
             </p>
         ),
@@ -163,33 +162,29 @@ export const education: TimelineItem[] = [
  * Work
  */
 export const experience: TimelineItem[] = [
-    {
-        date: "May 2024 - Dec 2024",
-        location: "Sorenson Communications",
-        title: "Network Operations Center Intern",
-        content: (
-            <p>
-                Sorenson communications provides video to telephone interpretive
-                services for the deaf. I monitored and maintained their
-                on-prem/cloud infrastructure, tested their apps/services, and
-                facilitated incident management. I was offered a full time
-                position but decided to finish up my CS degree at University of
-                Utah.
-            </p>
-        ),
-    },
-    {
-        date: "July 2016 - March 2018",
-        location: "Romac Services",
-        title: "Team Member, then Crew Chief",
-        content: (
-            <p>
-                I directed a team of associates in completing services. I
-                performed multiple tasks for local businesses, and fixed various
-                mechanical and industrial equipment.
-            </p>
-        ),
-    },
+	{
+		date: "May 2024 - Dec 2024",
+		location: "Sorenson Communications",
+		title: "Network Operations Center Intern",
+		content: (
+			<p>
+				Sorenson provides video to telephone interpretive services for the deaf. I monitored and
+				maintained their on-prem/cloud infrastructure, tested their apps/services, and facilitated incident
+				management.
+			</p>
+		),
+	},
+	{
+		date: "July 2016 - March 2018",
+		location: "Romac Services",
+		title: "Team Member, then Crew Chief",
+		content: (
+			<p>
+				Romac performed multiple tasks for local businesses. I directed a team of associates 
+                fixing various mechanical and industrial equipment.
+			</p>
+		),
+	},
 ];
 
 /**
@@ -245,107 +240,68 @@ export const skills: SkillGroup[] = [
  * Portfolio section
  */
 export const portfolioItems: ProjectItem[] = [
-    {
-        title: "React Portfolio",
-        description: `I created this react protfolio website showcasing myself and my 
-			accomplishments. It uses Typesctipt and is hosted on AWS.`,
-        url: undefined,
-        image: reactResume,
-    },
-    {
-        title: "Endangered Animal Slide Game!",
-        description: `I created a slide game featuring endangered animals using Qt and C++.`,
-        url: undefined,
-        image: endangeredAnimals,
-    },
-    {
-        title: "Home Assistant",
-        description: `I created a smart home with Home Assistant, Zigbee, MQTT, and Node Red.
-			I Installed and setup Home Assistant, an opensource fully featured
-            smart home operating system. I utilize Wifi, Zwave, and Zigbee to
-            communicate with all my smart home devices. I can securly control my
-            many smart home devices easily from any internet enabled device
-            using a cloudflare tunnel or my wireguard VPN.`,
-        url: undefined,
-        image: homeAssistant,
-    },
-    {
-        title: "Automated Auto Care",
-        description: `I created a full stack mobile application using React Native, 
-			NodeJS, MySQL, Terraform and Amazon Web Services. It uses google 
-			oAuth for authentication, has a fully functional backend REST API, 
-			and sends notifications using Firebase! This is still a work in progress.`,
-        url: "https://grider1.github.io/aacweb/",
-        image: automatedAutoCare,
-    },
-    {
-        title: "Sprite Editor",
-        description: `I created a multi-frame sprite image editor using Qt and C++.`,
-        url: "https://github.com/awpoch/Sprite-Editor",
-        image: spriteEditor,
-    },
-    {
-        title: "Proxmox",
-        description: `I setup a virtual environment with Proxmox to run all of my home services.
-			I setup a home lab using proxmox to run all my home services. With
-            proxmox I'm able to virutalize my router/firewall with pfsense, run
-            home assistant for my all my smart home devices and automations, run
-            Windows and Blue Iris for my Security System, and run Docker in
-            Linux for to create a Cloudflare tunnel. Below is a link to a
-            proxmox overview page and a picture of my setup.`,
-        url: undefined,
-        image: proxmox,
-    },
-    {
-        title: "Tank Wars Game",
-        description: `I created an online multiplayer tank game with AI players using C#.`,
-        url: "https://github.com/awpoch/TankWars",
-        image: tankWars,
-    },
-    {
-        title: "Drawing App",
-        description: `This Android app uses kotlin. It connects to a backend server for 
-			user account creation, login, and secure authentication. Once logged in, 
-			users can draw pictures and access a community feed to view and share content 
-			with others.`,
-        url: undefined,
-        image: drawingApp,
-    },
-    {
-        title: "PfSense",
-        description: `I setup a firewall and router for home use which uses multiple subnets to seperate untrusted devices on my network.
-			I Installed and setup pfSense, a firewall/router. I set up multiple
-            vlans and implemented well thought out firewall rules. I also have
-            Wireguard tunnel running so I can securly access my network from
-            outside my home.`,
-        url: undefined,
-        image: pfsense,
-    },
-    {
-        title: "Python Proxy",
-        description: `I created 3 python scripts, a client, a proxy, and server.`,
-        url: "https://github.com/awpoch/PythonProxy",
-        image: pythonProxy,
-    },
-    {
-        title: "Electronics Lab/Home Office",
-        description: `I setup an electronics repair lab in my office for ease of 
-        	access and functionality. I setup an electronic repair lab with a full size toolbox a vented    
-			locker to hold my desktop pc. I have lots of tools and electrical
-            components to fix just about anything. I like to design custom pcbs
-            for various projects I have going on and solder on all the
-            components myself. One of my favorite things to make are my custom
-            led lights that ramp the brightness and color output so it's easy to
-            just set it and forget it. Large toolbox makes is easy to stay organized which
-			makes for a great learning environment.
-			I setup a comfortable organized Home Office with a sit/stand desk
-            that raises and lowers at the push of a button. My pc is hidden away
-            from view in a vented locker which gives my office a clean
-            aesthetic.`,
-        url: undefined,
-        image: electronicsLab,
-    },
+	{
+		title: "React Portfolio",
+		description: `I created THIS web portfolio using React, TypeScript, Next.js, and tailwind. I use it to showcase my skills and experience. It's fully responsive and hosted on AWS. It features a clean modern UI, easy navigation, and custom animations. This site serves as a personal branding tool and a central hub for everything I’m building.`,
+		url: undefined,
+		image: reactResume,
+	},
+	{
+		title: "Automated Auto Care",
+		description: `A full-stack mobile app built using React Native, Node.js, MySQL, Firebase, and AWS. It provides car owners automated maintenance tracking and reminders. It utalizes Google OAuth for login, a custom backend REST API, and push notifications. To simplify development, the infrastructure is provisioned with Terraform and there is a CI/CD pipeline. This is still a work in progress, but the foundation is solid and could easily scale.`,
+		url: "https://grider1.github.io/aacweb/",
+		image: automatedAutoCare,
+	},
+	{
+		title: "Tank Wars Game",
+		description: `An online multiplayer tank game developed in C# with support for both human and AI-controlled players. Players navigate a battlefield with real-time action and competitive mechanics. Built with a focus on game logic, collision detection, and multiplayer networking.`,
+		url: "https://github.com/awpoch/TankWars",
+		image: tankWars,
+	},
+	{
+		title: "Drawing App",
+		description: `An Android app built with Kotlin and Jetpack Compose. Users can create accounts, log in securely, and draw on a canvas. Drawings are saved to a backend server, and users can view and engage with a community feed. Authentication is JWT-based, and the app demonstrates full integration with backend storage and user-generated content.`,
+		url: undefined,
+		image: drawingApp,
+	},
+	{
+		title: "Endangered Animal Slide Game",
+		description: `A slide puzzle game built with C++/Qt that features endangered animals. The game’s goal is to raise awareness while providing a fun and educational challenge. Each puzzle piece features an image of an endangered species. The image gets scrambled, and the player must slide the pieces around to restore the original image.`,
+		url: undefined,
+		image: endangeredAnimals,
+	},
+	{
+		title: "Home Assistant",
+		description: `I built a complete smart home setup using Home Assistant, Zigbee, Z-Wave, MQTT, and Node-RED. Devices are controlled remotely using a WireGuard VPN. I’ve automated lighting, climate control, and security with custom flows. Everything runs on a locally hosted Home Assistant instance, giving me total control and privacy.`,
+		url: undefined,
+		image: homeAssistant,
+	},
+	{
+		title: "Home Lab",
+		description: `I built a home lab and I use Proxmox to run multiple virtural machines and containers. I also configured a secure network utilizing smart firewall rules, VLANs, local DNS, custom domains, and valid certificates for a fully-featured, enterprise-style lab.`,
+		url: undefined,
+		image: proxmox,
+	},
+	{
+		title: "Sprite Editor",
+		description: `I created this C++/Qt application to allows users to create and manage animated images for 2D games. You can create frame-by-frame animations and export them when you're done. I built it to learn about graphics manipulation, user input handling, and real-time rendering techniques.`,
+		url: "https://github.com/awpoch/Sprite-Editor",
+		image: spriteEditor,
+	},
+	{
+		title: "Python Proxy",
+		description: `A network project involving three Python scripts: a client, a proxy, and a server. The proxy intercepts traffic, allowing for debugging, logging, or modifying requests. This project helped deepen my understanding of sockets, data streams, and TCP/IP communication.`,
+		url: "https://github.com/awpoch/PythonProxy",
+		image: pythonProxy,
+	},
+	{
+		title: "Home Office & Electronics Lab",
+		description: `I built a dual-purpose space that serves as both a high-performance home office and a fully functional electronics lab. The office features a motorized sit/stand desk, clean cable management, and a hidden PC tower for a minimal aesthetic. On the lab side, I’ve got a soldering station, oscilloscope, custom PCB tools, and a large tool chest stocked for repairs and prototyping. I regularly design and assemble LED lighting systems and small-scale electronics projects, all from a space that’s optimized for focus, comfort, and hands-on learning.`,
+		url: undefined,
+		image: homeOffice,
+	},
 ];
+
 
 /**
  * Testimonial section
@@ -361,7 +317,7 @@ export const testimonial: TestimonialSection = {
         {
             name: "Richard Ghersi - Sorenson Communications Manager",
             text: "Thank you so much for being a part of our team! Your hard work and dedication have not gone unnoticed.",
-            image: richardGhersi,
+            image: undefined,
         },
     ],
 };

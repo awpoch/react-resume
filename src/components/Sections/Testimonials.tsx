@@ -98,7 +98,7 @@ export const Testimonials: FC = memo(() => {
                 }
             >
                 <h2 className="z-10 text-white text-heading font-bold text-center mb-8">
-                    What people are saying
+                    Testimonials
                 </h2>
 
                 <div className="z-10 w-full max-w-screen-md px-4 lg:px-0">
@@ -167,7 +167,7 @@ export const TestimonialCard: FC<{
             className={classNames(
                 "flex flex-col sm:flex-row w-full shrink-0 snap-start snap-always p-2 transition-opacity duration-1000",
                 isActive ? "opacity-100" : "opacity-0",
-                "items-center sm:items-start gap-y-4 sm:gap-x-6"
+                "items-center sm:items-center gap-y-4 sm:gap-x-6"
             )}
         >
             <div
