@@ -131,7 +131,7 @@ export const aboutData: About = {
  */
 export const education: TimelineItem[] = [
     {
-        date: "September 2020 - December 2025 (Expected)",
+        date: "September 2020 - December 2025 (Expected, 1 elective class remaining)",
         location: "University of Utah",
         title: "Bachelor's in Computer Science",
         content: (
