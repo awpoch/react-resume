@@ -136,8 +136,8 @@ export const education: TimelineItem[] = [
         title: "Bachelor's in Computer Science",
         content: (
             <p>
-                U of U has been great for teaching a broad understanding
-                computers, not just how to code. Things like networking,
+                U of U has been great for teaching a broad understanding of
+                computers, not just how to code. I learned things like networking,
                 compilers, interpreters, algorithms, memory allocation, boolean
                 logic, and advanced math.
             </p>
@@ -170,7 +170,7 @@ export const experience: TimelineItem[] = [
             <p>
                 Sorenson provides video to telephone interpretive services for
                 the deaf. I monitored and maintained their on-prem/cloud
-                infrastructure, tested their apps/services, and facilitated
+                infrastructure, tested their apps and services, and facilitated
                 incident management.
             </p>
         ),
@@ -200,7 +200,7 @@ export const skills: SkillGroup[] = [
             { name: "Kotlin (Mobile)", level: 7 },
             { name: "React, React Native, Next.js, Node.js", level: 9 },
             { name: "Javascript, Typescript, HTML, CSS, JSON", level: 8 },
-            { name: "Rest APIs, MySQL, Express.js Prisma ORM", level: 8 },
+            { name: "Rest APIs, MySQL, Express.js, Prisma ORM", level: 8 },
         ],
     },
     {
@@ -221,7 +221,7 @@ export const skills: SkillGroup[] = [
             { name: "VMware's ESXi & Proxmox (Virtualization)", level: 8 },
             { name: "Home Assiatant Automations, MQTT, Node Red", level: 8 },
             {
-                name: "Subnetting, CIDR Notation, Wireshark, Nmap, Traceroute",
+                name: "Subnetting, CIDR Notation, Nmap, Traceroute",
                 level: 9,
             },
         ],
@@ -244,7 +244,7 @@ export const skills: SkillGroup[] = [
 export const portfolioItems: ProjectItem[] = [
     {
         title: "React Portfolio",
-        description: `I created THIS web portfolio using React, TypeScript, Next.js, and tailwind. I use it to showcase my skills and experience. It's fully responsive and hosted on AWS. It features a clean modern UI, easy navigation, and custom animations. This site serves as a personal branding tool and a central hub for everything I’m building.`,
+        description: `I created THIS web portfolio using React, TypeScript, Next.js, and Tailwind. I use it to showcase my skills and experience. It's fully responsive and hosted on AWS. It features a clean modern UI, easy navigation, and custom animations. This site serves as a personal branding tool and a central hub for everything I’m building.`,
         url: undefined,
         image: reactResume,
     },
@@ -257,7 +257,7 @@ export const portfolioItems: ProjectItem[] = [
     {
         title: "Tank Wars Game",
         description: `An online multiplayer tank game developed in C# with support for both human and AI-controlled players. Players navigate a battlefield with real-time action and competitive mechanics. Built with a focus on game logic, collision detection, and multiplayer networking.`,
-        url: "https://github.com/awpoch/TankWars",
+        url: undefined,
         image: tankWars,
     },
     {
@@ -268,7 +268,7 @@ export const portfolioItems: ProjectItem[] = [
     },
     {
         title: "Endangered Animal Slide Game",
-        description: `A slide puzzle game built with C++/Qt that features endangered animals. The game’s goal is to raise awareness while providing a fun and educational challenge. Each puzzle piece features an image of an endangered species. The image gets scrambled, and the player must slide the pieces around to restore the original image.`,
+        description: `A slide puzzle game built with C++/Qt that features endangered animals. The game’s goal is to raise awareness while providing a fun educational challenge. Each puzzle piece features an image of an endangered species. The image gets scrambled, and the player must slide the pieces around to restore the original image.`,
         url: undefined,
         image: endangeredAnimals,
     },
@@ -286,19 +286,19 @@ export const portfolioItems: ProjectItem[] = [
     },
     {
         title: "Sprite Editor",
-        description: `I created this C++/Qt application to allows users to create and manage animated images for 2D games. You can create frame-by-frame animations and export them when you're done. I built it to learn about graphics manipulation, user input handling, and real-time rendering techniques.`,
-        url: "https://github.com/awpoch/Sprite-Editor",
+        description: `I created this C++/Qt application to allows users to create and manage animated images for 2D games. Frame-by-frame animations can easily be created and exported. I built it to learn about graphics manipulation, user input handling, and real-time rendering techniques.`,
+        url: undefined,
         image: spriteEditor,
     },
     {
         title: "Python Proxy",
         description: `A network project involving three Python scripts: a client, a proxy, and a server. The proxy intercepts traffic, allowing for debugging, logging, or modifying requests. This project helped deepen my understanding of sockets, data streams, and TCP/IP communication.`,
-        url: "https://github.com/awpoch/PythonProxy",
+        url: undefined,
         image: pythonProxy,
     },
     {
         title: "Home Office & Electronics Lab",
-        description: `I built a dual-purpose space that serves as both a high-performance home office and a fully functional electronics lab. The office features a motorized sit/stand desk, clean cable management, and a hidden PC tower for a minimal aesthetic. On the lab side, I’ve got a soldering station, oscilloscope, custom PCB tools, and a large tool chest stocked for repairs and prototyping. I regularly design and assemble LED lighting systems and small-scale electronics projects, all from a space that’s optimized for focus, comfort, and hands-on learning.`,
+        description: `I built a dual-purpose space that serves as both a high-performance home office and a fully functional electronics lab. The office features a motorized sit/stand desk, clean cable management, and a hidden PC tower for a minimalist aesthetic. On the lab side, I’ve got a soldering station, oscilloscope, custom PCB tools, and a large tool chest stocked for repairs and prototyping. I regularly design and assemble LED lighting systems and small-scale electronics projects, all from a space that’s optimized for focus, comfort, and hands-on learning.`,
         url: undefined,
         image: homeOffice,
     },
@@ -360,7 +360,7 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-    { label: "Github", Icon: GithubIcon, href: "https://github.com/awpoch" },
+    //{ label: "Github", Icon: GithubIcon, href: "https://github.com/awpoch" },
     {
         label: "LinkedIn",
         Icon: LinkedInIcon,

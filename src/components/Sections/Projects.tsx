@@ -274,16 +274,6 @@ const ExpandableItem: FC<{
                         </AnimatePresence>
                     </motion.div>
                 )}
-
-                {/* Chevron */}
-                <div className="absolute right-4 top-1/2 -translate-y-1/2 text-white">
-                    <motion.div
-                        animate={{ rotate: isOpen ? 0 : -90 }}
-                        transition={chevronRotateTransition}
-                    >
-                        <ChevronDownIcon className="h-5 w-5" />
-                    </motion.div>
-                </div>
             </motion.div>
         </motion.div>
     );

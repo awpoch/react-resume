@@ -11,7 +11,7 @@ export const useNavObserver = (
         );
 
         if (!elements.length) {
-            console.warn("⚠️ No matching elements for selector:", selector);
+            console.warn("No matching elements for selector:", selector);
             return;
         }
 

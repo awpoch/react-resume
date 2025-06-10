@@ -14,24 +14,27 @@ import Video from "../components/Sections/Video";
 import { homePageMeta } from "../data/data";
 
 const Header = dynamic(() => import("../components/Sections/Header"), {
-	ssr: false,
+    ssr: false,
 });
 
 const Home: FC = memo(() => {
-	const { title, description } = homePageMeta;
-	return (
-		<Page description={description} title={title}>
-			<Head><link href="/favicon.png" rel="icon" /></Head>
-			<Header />
-			<Hero />
-			<About />
-			<Resume />
-			<Projects />
-			<Testimonials />
-			<Contact />
-			<Footer />
-		</Page>
-	);
+    const { title, description } = homePageMeta;
+    return (
+        <Page description={description} title={title}>
+            <Head>
+                <link href="/favicon.png" rel="icon" />
+            </Head>
+            <Header />
+            <Hero />
+            <About />
+            <Resume />
+            <Projects />
+            <Testimonials />
+            <Video />
+            <Contact />
+            <Footer />
+        </Page>
+    );
 });
 
 export default Home;
