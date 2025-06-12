@@ -157,124 +157,111 @@ const ExpandableItem: FC<{
     const { title, description, url, image } = item;
 
     return (
-        <motion.div
-            id={`portfolio-item-${index}`}
-            layoutId={`project-${index}`}
-            className="rounded-xl bg-gray-600 shadow-md overflow-hidden relative z-10"
-            style={{ backgroundClip: "padding-box" }}
-        >
-            <motion.div
-                layout
-                transition={textTransition}
-                onClick={onClick}
-                className={classNames(
-                    "relative w-full cursor-pointer px-4 py-3 gap-4",
-                    isOpen
-                        ? "grid grid-cols-1 sm:grid-cols-[auto,1fr] sm:auto-rows-min"
-                        : "grid grid-cols-[auto,1fr] items-center"
-                )}
-            >
-                {/* Title */}
-                <div
-                    className={classNames(
-                        isOpen
-                            ? "order-1 sm:order-2 w-full flex justify-center sm:justify-start"
-                            : "order-2"
-                    )}
-                >
-                    <motion.h3
-                        layout="position"
-                        transition={textTransition}
-                        className="text-subheading font-semibold text-white"
-                    >
-                        {title}
-                    </motion.h3>
-                </div>
+		<motion.div
+			id={`portfolio-item-${index}`}
+			layoutId={`project-${index}`}
+			className="rounded-xl bg-gray-600 shadow-md overflow-hidden relative z-10"
+			style={{ backgroundClip: "padding-box" }}
+		>
+			<motion.div
+				layout
+				transition={textTransition}
+				onClick={onClick}
+				className={classNames(
+					"relative w-full cursor-pointer px-4 py-3 gap-4",
+					isOpen
+						? "grid grid-cols-1 sm:grid-cols-[auto,1fr] sm:auto-rows-min"
+						: "grid grid-cols-[auto,1fr] items-center"
+				)}
+			>
+				{/* Title */}
+				<div className={classNames(isOpen ? "order-1 sm:order-2 w-full text-center sm:text-left" : "order-2")}>
+					<motion.h3
+						layout="position"
+						transition={textTransition}
+						className="text-subheading font-semibold text-white"
+					>
+						{title}
+					</motion.h3>
+				</div>
 
-                {/* Image */}
-                <motion.div
-                    layout
-                    className={classNames(
-                        "relative transition-all bg-gray-600 flex justify-start",
-                        isOpen
-                            ? "order-2 sm:order-1 w-full max-w-[90vw] sm:w-[300px] sm:row-span-2"
-                            : "order-1 w-[6rem] h-[6rem] shrink-0"
-                    )}
-                >
-                    <motion.img
-                        src={typeof image === "string" ? image : image.src}
-                        alt={`${title} icon`}
-                        initial={false}
-                        animate={{ scale: isOpen ? 1 : 0.9 }}
-                        transition={imageScaleTransition}
-                        className={classNames(
-                            "object-contain",
-                            isOpen ? "max-h-[40vh] w-full" : "h-full w-full"
-                        )}
-                        style={{
-                            transformOrigin: "top left",
-                            borderRadius: "inherit",
-                            position: isOpen ? "relative" : "absolute",
-                            top: 0,
-                            left: 0,
-                        }}
-                    />
-                </motion.div>
+				{/* Image */}
+				<motion.div
+					layout
+					className={classNames(
+						"relative transition-all bg-gray-600 flex justify-start",
+						isOpen
+							? "order-2 sm:order-1 w-full max-w-[90vw] sm:w-[300px] sm:row-span-2"
+							: "order-1 w-[6rem] h-[6rem] shrink-0"
+					)}
+				>
+					<motion.img
+						src={typeof image === "string" ? image : image.src}
+						alt={`${title} icon`}
+						initial={false}
+						animate={{ scale: isOpen ? 1 : 0.9 }}
+						transition={imageScaleTransition}
+						className={classNames("object-contain", isOpen ? "max-h-[40vh] w-full" : "h-full w-full")}
+						style={{
+							transformOrigin: "top left",
+							borderRadius: "inherit",
+							position: isOpen ? "relative" : "absolute",
+							top: 0,
+							left: 0,
+						}}
+					/>
+				</motion.div>
 
-                {/* Text (description + URL) */}
-                {isOpen && (
-                    <motion.div
-                        layout
-                        transition={textTransition}
-                        className="order-3 w-full flex flex-col items-start text-left gap-y-2"
-                    >
-                        <AnimatePresence initial={false} mode="wait">
-                            <motion.div
-                                key="wrapper"
-                                initial={{ height: 0, opacity: 0 }}
-                                animate={{ height: "auto", opacity: 1 }}
-                                exit={{ height: 0, opacity: 0 }}
-                                transition={{
-                                    duration: textAnimationSpeedS,
-                                    ease: animationEasings.easeInOut,
-                                }}
-                                className="overflow-hidden w-full"
-                            >
-                                <motion.div
-                                    key="content"
-                                    initial={{ opacity: 0, y: -10 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    exit={{ opacity: 0, y: -10 }}
-                                    transition={{
-                                        duration: textAnimationSpeedS,
-                                        ease: animationEasings.easeInOut,
-                                    }}
-                                    className="w-full flex flex-col gap-y-2 text-gray-300 items-center text-center sm:items-start sm:text-left"
-                                >
-                                    {description && (
-                                        <p className="text-body w-full">
-                                            {description}
-                                        </p>
-                                    )}
-                                    {url && (
-                                        <div className="w-full">
-                                            <a
-                                                href={url}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="inline-flex items-center gap-x-1 text-blue-400 hover:underline"
-                                            >
-                                                View project
-                                                <ArrowTopRightOnSquareIcon className="h-4 w-4" />
-                                            </a>
-                                        </div>
-                                    )}
-                                </motion.div>
-                            </motion.div>
-                        </AnimatePresence>
-                    </motion.div>
-                )}
-            </motion.div>
-        </motion.div>
-    );
+				{/* Text (description + URL) */}
+				{isOpen && (
+					<motion.div
+						layout
+						transition={textTransition}
+						className="order-3 w-full flex flex-col items-start text-left gap-y-2"
+					>
+						<AnimatePresence initial={false} mode="wait">
+							<motion.div
+								key="wrapper"
+								initial={{ height: 0, opacity: 0 }}
+								animate={{ height: "auto", opacity: 1 }}
+								exit={{ height: 0, opacity: 0 }}
+								transition={{
+									duration: textAnimationSpeedS,
+									ease: animationEasings.easeInOut,
+								}}
+								className="overflow-hidden w-full"
+							>
+								<motion.div
+									key="content"
+									initial={{ opacity: 0, y: -10 }}
+									animate={{ opacity: 1, y: 0 }}
+									exit={{ opacity: 0, y: -10 }}
+									transition={{
+										duration: textAnimationSpeedS,
+										ease: animationEasings.easeInOut,
+									}}
+									className="w-full flex flex-col gap-y-2 text-gray-300 items-center text-center sm:items-start sm:text-left"
+								>
+									{description && <p className="text-body w-full">{description}</p>}
+									{url && (
+										<div className="w-full">
+											<a
+												href={url}
+												target="_blank"
+												rel="noopener noreferrer"
+												className="inline-flex items-center gap-x-1 text-blue-400 hover:underline"
+											>
+												View project
+												<ArrowTopRightOnSquareIcon className="h-4 w-4" />
+											</a>
+										</div>
+									)}
+								</motion.div>
+							</motion.div>
+						</AnimatePresence>
+					</motion.div>
+				)}
+			</motion.div>
+		</motion.div>
+	);
 };
