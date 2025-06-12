@@ -70,11 +70,8 @@ export const heroData: Hero = {
         <>
             <p className="text-body text-stone-200">
                 {`I'm a student at `}
-                <strong className="text-stone-100">
-                    University of Utah
-                </strong>{" "}
-                with
-                {` one remaining class to get a Bachelor's Degree in Computer Science. I'm currently looking for a `}
+                <strong className="text-stone-100">University of Utah</strong>
+                {` with one remaining class to get a Bachelor's Degree in Computer Science. I'm currently looking for a `}
                 <strong className="text-stone-100">
                     full-time job or internship
                 </strong>
@@ -108,8 +105,11 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
     profileImageSrc: profilePic,
-    description: `I'm one elective class away from a Computer Science Degree at the University of Utah and am looking for a full-time opportunity
-  where I can learn and work with a skilled team. I'm a problem solver, self starter, organized, and I'm easy to get along with.`,
+    description: `I'm one elective away from completing my Computer Science Degree at the 
+        University of Utah and am currently looking for a full-time opportunity
+        where I can improve my skills while contributing to a strong development team. 
+        I'm a problem solver, self-starter, and highly organized. 
+        I work well with others, adapt quickly, stay focused on finding solutions, and deliver quality work.`,
     aboutItems: [
         { label: "Location", text: "Sandy, Utah", Icon: MapIcon },
         { label: "Nationality", text: "American", Icon: FlagIcon },
@@ -137,9 +137,9 @@ export const education: TimelineItem[] = [
         content: (
             <p>
                 U of U has been great for teaching a broad understanding of
-                computers, not just how to code. I learned things like networking,
-                compilers, interpreters, algorithms, memory allocation, boolean
-                logic, and advanced math.
+                computers, not just how to code. I learned things like
+                networking, compilers, interpreters, algorithms, memory
+                allocation, boolean logic, and advanced math.
             </p>
         ),
     },
