@@ -69,7 +69,7 @@ export const heroData: Hero = {
     description: (
         <>
             <p className="text-body text-stone-200">
-                {`Im a student at `}
+                {`I'm a student at `}
                 <strong className="text-stone-100">
                     University of Utah
                 </strong>{" "}
