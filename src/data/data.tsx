@@ -328,7 +328,7 @@ export const testimonial: TestimonialSection = {
  */
 export const videoData: Video = {
     imageSrc: background,
-    description: `Video of my Bass Skills`,
+    description: `Bonus Video`,
 };
 
 /**
