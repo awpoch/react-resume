@@ -1,7 +1,3 @@
-
-# Syncthing versioning
-.stversions/
-
 # dependencies
 /node_modules
 /.pnp
