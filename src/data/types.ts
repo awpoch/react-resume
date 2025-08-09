@@ -107,6 +107,7 @@ export interface Testimonial {
  */
 export interface Video {
     imageSrc?: string | StaticImageData;
+    url: string;
     description: string;
 }
 

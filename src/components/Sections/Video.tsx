@@ -58,7 +58,7 @@ const Video: FC = memo(() => {
                 <div className="mt-8 mb-8" style={videoWrapperStyle}>
                     <iframe
                         className="w-full h-full"
-                        src="https://www.youtube.com/embed/v0FnmTTD3ek"
+                        src={videoData.url}
                         title="YouTube video player"
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

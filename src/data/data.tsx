@@ -328,6 +328,7 @@ export const testimonial: TestimonialSection = {
  */
 export const videoData: Video = {
     imageSrc: background,
+    url: "https://www.youtube.com/embed/v0FnmTTD3ek",
     description: `Bonus Video`,
 };
 
