@@ -297,13 +297,6 @@ export const portfolioItems: ProjectItem[] = [
         image: pythonProxy,
     },
     {
-<<<<<<< HEAD
-        title: "Home Office & Electronics Lab",
-        description: `I built a dual-purpose space that serves as both a high-performance home office and a fully functional electronics lab. The office features a motorized sit/stand desk, clean cable management, and a hidden PC tower for a minimalist aesthetic. On the lab side, I’ve got a soldering station, oscilloscope, custom PCB tools, and a large tool chest stocked for repairs and prototyping. I regularly design and assemble LED lighting systems and small-scale electronics projects, all from a space that’s optimized for focus, comfort, and hands-on learning.`,
-        url: undefined,
-        image: homeOffice,
-    },
-=======
         title: "Home Office",
         description: `I built a high-performance workspace designed for productivity and comfort. The office features a motorized sit/stand desk, clean cable management, and a hidden PC tower for a minimalist aesthetic. It’s a space optimized for focus, remote work, and creative projects.`,
         url: undefined,
@@ -316,7 +309,6 @@ export const portfolioItems: ProjectItem[] = [
         url: undefined,
         image: electronicsLab,
     },
->>>>>>> reattach
 ];
 
 /**
