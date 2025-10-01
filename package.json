@@ -1,0 +1,49 @@
+{
+    "name": "react-resume-template",
+    "version": "2.0.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build": "npm run compile && next build",
+        "compile": "tsc --build --verbose",
+        "clean": "rm -rf build-tsc .next",
+        "dev": "npm run compile && next dev",
+        "start": "next start",
+        "sitemap": "next-sitemap"
+    },
+    "dependencies": {
+        "@headlessui/react": "^2.2.3",
+        "@heroicons/react": "^2.0.18",
+        "autoprefixer": "^10.4.14",
+        "classnames": "^2.3.2",
+        "framer-motion": "^12.12.1",
+        "glob": "^11.0.2",
+        "next": "^15.3.2",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "react-favicon": "^2.0.3",
+        "rimraf": "^6.0.1",
+        "sharp": "^0.34.1",
+        "ts-pattern": "^5.0.4"
+    },
+    "devDependencies": {
+        "@tailwindcss/forms": "^0.5.4",
+        "@tailwindcss/typography": "^0.5.16",
+        "@types/node": "^22.15.17",
+        "@types/react": "^19.1.4",
+        "@types/react-dom": "^19.1.5",
+        "@types/webpack-env": "^1.18.1",
+        "cssnano": "^7.0.7",
+        "postcss": "^8.4.27",
+        "postcss-preset-env": "^10.1.6",
+        "prettier": "^3.0.0",
+        "prettier-plugin-tailwindcss": "^0.6.11",
+        "sass": "^1.64.2",
+        "sort-package-json": "^3.2.1",
+        "tailwindcss": "^3.4.17",
+        "typescript": "^5.8.3"
+    },
+    "resolutions": {
+        "autoprefixer": "10.4.5"
+    }
+}
