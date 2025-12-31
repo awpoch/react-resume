@@ -296,6 +296,7 @@ export const portfolioItems: ProjectItem[] = [
         url: undefined,
         image: pythonProxy,
     },
+    /*
     {
         title: "Home Office",
         description: `I built a high-performance workspace designed for productivity and comfort. The office features a motorized sit/stand desk, clean cable management, and a hidden PC tower for a minimalist aesthetic. It’s a space optimized for focus, remote work, and creative projects.`,
@@ -308,6 +309,14 @@ export const portfolioItems: ProjectItem[] = [
             "Alongside my office, I've set up a fully functional electronics lab. It includes a soldering station, oscilloscope, custom PCB tools, and a large tool chest stocked for repairs and prototyping. I regularly design and assemble LED lighting systems and small-scale electronics projects, creating a space that supports both learning and hands-on experimentation.",
         url: undefined,
         image: electronicsLab,
+    },
+    */
+    {
+        title: "Home Office + Electronics Lab",
+        description:
+            "I built a high-performance workspace that blends a focused home office with a fully equipped electronics bench. It features a sit/stand desk, clean cable management, and a hidden PC tower alongside a soldering station, oscilloscope, and PCB tools. The space supports deep focus, repair work, and hands-on prototyping in one streamlined setup.",
+        url: undefined,
+        image: homeOffice,
     },
 ];
 

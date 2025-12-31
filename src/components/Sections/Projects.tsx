@@ -22,11 +22,6 @@ const animationEasings = {
     customBezier: [0.4, 0, 0.2, 1],
 };
 
-const imageScaleTransition = {
-    duration: 0.5,
-    ease: "easeIn",
-};
-
 const chevronRotateTransition = {
     duration: 0.5,
     ease: "easeIn",
@@ -38,9 +33,9 @@ const textTransition = {
     ease: animationEasings.customBezier,
 };
 
-// 🔧 Predictive scroll calculation after layout settles
+// Predictive scroll calculation aligned with layout changes.
 const scrollToItem = (index: number) => {
-    setTimeout(() => {
+    requestAnimationFrame(() => {
         const item = document.getElementById(`portfolio-item-${index}`);
         const navbar = document.getElementById("site-header");
 
@@ -62,7 +57,7 @@ const scrollToItem = (index: number) => {
             top: targetScroll,
             behavior: "smooth",
         });
-    }, 200);
+    });
 };
 
 const Projects: FC = memo(() => {
@@ -88,7 +83,7 @@ const Projects: FC = memo(() => {
             sectionId={SectionId.Projects}
             noPadding
             className={classNames(
-                "w-full bg-cover bg-center px-4 sm:px-6 lg:px-8",
+                "relative w-full bg-cover bg-center px-4 py-16 sm:px-6 sm:py-20 lg:px-8",
                 parallaxEnabled && "bg-fixed",
                 !imageSrc && "bg-neutral-100"
             )}
@@ -96,14 +91,17 @@ const Projects: FC = memo(() => {
                 imageSrc ? { backgroundImage: `url(${resolveSrc})` } : undefined
             }
         >
-            <div className="w-full mx-auto max-w-6xl bg-neutral-800 shadow-xl p-10 border-l border-r border-neutral-700 rounded-b-xl">
-                <div className="flex flex-col gap-4">
-                    <h2 className="self-center text-heading font-bold text-white mb-8 text-center">
+            <div className="w-full mx-auto max-w-6xl rounded-2xl border border-white/10 bg-neutral-900/80 px-6 py-10 shadow-2xl shadow-black/40 backdrop-blur sm:px-8 sm:py-12">
+                <div className="flex flex-col gap-2 text-center sm:gap-3">
+                    <h2 className=" pb-8 text-heading font-semibold tracking-tight text-white">
                         Projects
                     </h2>
+                    <div className="h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+                </div>
 
+                <div className="mt-8 flex flex-col gap-6">
                     {portfolioItems.map((item, index) => (
-                        <motion.div key={index} className="mb-6 last:mb-0">
+                        <motion.div key={index} className="last:mb-0">
                             <ExpandableItem
                                 item={item}
                                 index={index}
@@ -114,25 +112,14 @@ const Projects: FC = memo(() => {
                                     const newIndex = isClosing ? null : index;
 
                                     if (openIndex !== null && !isClosing) {
-                                        const goingUp = index < openIndex;
-                                        setOpenIndex(null);
-
-                                        setTimeout(() => {
-                                            scrollToItem(index);
-                                            setTimeout(
-                                                () => setOpenIndex(index),
-                                                goingUp ? 400 : 100
-                                            );
-                                        }, 250);
+                                        setOpenIndex(index);
+                                        scrollToItem(index);
                                         return;
                                     }
 
                                     setOpenIndex(newIndex);
                                     if (!isClosing) {
-                                        setTimeout(
-                                            () => scrollToItem(index),
-                                            250
-                                        );
+                                        scrollToItem(index);
                                     }
                                 }}
                             />
@@ -157,111 +144,127 @@ const ExpandableItem: FC<{
     const { title, description, url, image } = item;
 
     return (
-		<motion.div
-			id={`portfolio-item-${index}`}
-			layoutId={`project-${index}`}
-			className="rounded-xl bg-gray-600 shadow-md overflow-hidden relative z-10"
-			style={{ backgroundClip: "padding-box" }}
-		>
-			<motion.div
-				layout
-				transition={textTransition}
-				onClick={onClick}
-				className={classNames(
-					"relative w-full cursor-pointer px-4 py-3 gap-4",
-					isOpen
-						? "grid grid-cols-1 sm:grid-cols-[auto,1fr] sm:auto-rows-min"
-						: "grid grid-cols-[auto,1fr] items-center"
-				)}
-			>
-				{/* Title */}
-				<div className={classNames(isOpen ? "order-1 sm:order-2 w-full text-center sm:text-left" : "order-2")}>
-					<motion.h3
-						layout="position"
-						transition={textTransition}
-						className="text-subheading font-semibold text-white"
-					>
-						{title}
-					</motion.h3>
-				</div>
+        <motion.div
+            id={`portfolio-item-${index}`}
+            layoutId={`project-${index}`}
+            className={classNames(
+                "relative z-10 overflow-hidden rounded-2xl border bg-gradient-to-br shadow-lg shadow-black/30 transition-all",
+                isOpen
+                    ? "border-white/20 from-neutral-800 via-neutral-800 to-neutral-900"
+                    : "border-white/10 from-neutral-800/80 to-neutral-900/80 hover:border-white/20 hover:shadow-black/50"
+            )}
+            style={{ backgroundClip: "padding-box" }}
+        >
+            <motion.div
+                layout
+                transition={textTransition}
+                onClick={onClick}
+                className={classNames(
+                    "relative w-full cursor-pointer gap-4 px-5 py-4 sm:px-6 sm:py-5",
+                    isOpen
+                        ? "grid grid-cols-1 sm:grid-cols-[auto,1fr] sm:auto-rows-min"
+                        : "grid grid-cols-[auto,1fr] items-center"
+                )}
+            >
+                {/* Title */}
+                <div
+                    className={classNames(
+                        isOpen
+                            ? "order-1 sm:order-2 w-full text-center sm:text-left"
+                            : "order-2"
+                    )}
+                >
+                    <motion.h3
+                        layout="position"
+                        transition={textTransition}
+                        className="text-subheading font-semibold text-white"
+                    >
+                        {title}
+                    </motion.h3>
+                </div>
 
-				{/* Image */}
+                {/* Image */}
 				<motion.div
 					layout
+					transition={textTransition}
 					className={classNames(
-						"relative transition-all bg-gray-600 flex justify-start",
+						"relative flex justify-start rounded-xl bg-black/20 p-2",
 						isOpen
-							? "order-2 sm:order-1 w-full max-w-[90vw] sm:w-[300px] sm:row-span-2"
-							: "order-1 w-[6rem] h-[6rem] shrink-0"
-					)}
-				>
-					<motion.img
-						src={typeof image === "string" ? image : image.src}
-						alt={`${title} icon`}
-						initial={false}
-						animate={{ scale: isOpen ? 1 : 0.9 }}
-						transition={imageScaleTransition}
-						className={classNames("object-contain", isOpen ? "max-h-[40vh] w-full" : "h-full w-full")}
-						style={{
-							transformOrigin: "top left",
-							borderRadius: "inherit",
-							position: isOpen ? "relative" : "absolute",
-							top: 0,
-							left: 0,
-						}}
-					/>
-				</motion.div>
+							? "order-2 sm:order-1 w-full max-w-[90vw] sm:w-[320px] sm:row-span-2"
+                            : "order-1 w-[6rem] h-[6rem] shrink-0"
+                    )}
+                >
+                    <motion.img
+                        src={typeof image === "string" ? image : image.src}
+                        alt={`${title} icon`}
+                        className={classNames(
+                            "object-contain",
+                            isOpen ? "max-h-[40vh] w-full" : "h-full w-full"
+                        )}
+                        style={{
+                            transformOrigin: "top left",
+                            borderRadius: "inherit",
+                            position: isOpen ? "relative" : "absolute",
+                            top: 0,
+                            left: 0,
+                        }}
+                    />
+                </motion.div>
 
-				{/* Text (description + URL) */}
-				{isOpen && (
-					<motion.div
-						layout
-						transition={textTransition}
-						className="order-3 w-full flex flex-col items-start text-left gap-y-2"
-					>
-						<AnimatePresence initial={false} mode="wait">
-							<motion.div
-								key="wrapper"
-								initial={{ height: 0, opacity: 0 }}
-								animate={{ height: "auto", opacity: 1 }}
-								exit={{ height: 0, opacity: 0 }}
-								transition={{
-									duration: textAnimationSpeedS,
-									ease: animationEasings.easeInOut,
-								}}
-								className="overflow-hidden w-full"
-							>
-								<motion.div
-									key="content"
-									initial={{ opacity: 0, y: -10 }}
-									animate={{ opacity: 1, y: 0 }}
-									exit={{ opacity: 0, y: -10 }}
-									transition={{
-										duration: textAnimationSpeedS,
-										ease: animationEasings.easeInOut,
-									}}
-									className="w-full flex flex-col gap-y-2 text-gray-300 items-center text-center sm:items-start sm:text-left"
-								>
-									{description && <p className="text-body w-full">{description}</p>}
-									{url && (
-										<div className="w-full">
-											<a
-												href={url}
-												target="_blank"
-												rel="noopener noreferrer"
-												className="inline-flex items-center gap-x-1 text-blue-400 hover:underline"
-											>
-												View project
-												<ArrowTopRightOnSquareIcon className="h-4 w-4" />
-											</a>
-										</div>
-									)}
-								</motion.div>
-							</motion.div>
-						</AnimatePresence>
-					</motion.div>
-				)}
-			</motion.div>
-		</motion.div>
-	);
+                {/* Text (description + URL) */}
+                {isOpen && (
+                    <motion.div
+                        layout
+                        transition={textTransition}
+                        className="order-3 w-full flex flex-col items-start gap-y-2 text-left"
+                    >
+                        <AnimatePresence initial={false} mode="wait">
+                            <motion.div
+                                key="wrapper"
+                                initial={{ height: 0, opacity: 0 }}
+                                animate={{ height: "auto", opacity: 1 }}
+                                exit={{ height: 0, opacity: 0 }}
+                                transition={{
+                                    duration: textAnimationSpeedS,
+                                    ease: animationEasings.easeInOut,
+                                }}
+                                className="overflow-hidden w-full"
+                            >
+                                <motion.div
+                                    key="content"
+                                    initial={{ opacity: 0, y: -10 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: -10 }}
+                                    transition={{
+                                        duration: textAnimationSpeedS,
+                                        ease: animationEasings.easeInOut,
+                                    }}
+                                    className="w-full flex flex-col gap-y-3 text-neutral-200 items-center text-center sm:items-start sm:text-left"
+                                >
+                                    {description && (
+                                        <p className="text-body w-full">
+                                            {description}
+                                        </p>
+                                    )}
+                                    {url && (
+                                        <div className="w-full">
+                                            <a
+                                                href={url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="inline-flex items-center gap-x-1 text-emerald-300 transition-colors hover:text-emerald-200"
+                                            >
+                                                View project
+                                                <ArrowTopRightOnSquareIcon className="h-4 w-4" />
+                                            </a>
+                                        </div>
+                                    )}
+                                </motion.div>
+                            </motion.div>
+                        </AnimatePresence>
+                    </motion.div>
+                )}
+            </motion.div>
+        </motion.div>
+    );
 };

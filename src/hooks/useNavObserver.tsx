@@ -49,6 +49,6 @@ export const useNavObserver = (
     }, [selector, handler]);
 };
 
-function buildThresholdList(steps = 100) {
+const buildThresholdList = (steps = 100) => {
     return Array.from({ length: steps + 1 }, (_, i) => i / steps);
-}
+};
