@@ -69,18 +69,19 @@ export const heroData: Hero = {
     description: (
         <>
             <p className="text-body text-stone-200">
-                {`I'm a student at `}
+                {`I recently graduated from `}
                 <strong className="text-stone-100">University of Utah</strong>
-                {` with one remaining class to get a Bachelor's Degree in Computer Science. I'm currently looking for a `}
-                <strong className="text-stone-100">
-                    full-time job or internship
-                </strong>
-                {`.`}
+                {` with a `}
+                <strong className="text-stone-100">Bachelor's Degree</strong>
+                {` in `}
+                <strong className="text-stone-100">Computer Science</strong>
+                {`. Keeping my eyes open for an `}
+                <strong className="text-stone-100">awesome</strong>
+                {` place to work.`}
             </p>
-            <p className="text-body text-stone-200">
-                In my free time, you might catch me playing my bass guitar,
-                fixing electronics, working on cars, camping and hiking all over
-                Utah, or spending time with family and friends.
+            <p className=" pt-6 text-body text-stone-200">
+                I like solving problems that make life easier for myself and the
+                people around me.
             </p>
         </>
     ),
@@ -105,11 +106,7 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
     profileImageSrc: profilePic,
-    description: `I'm one elective away from completing my Computer Science Degree at the 
-        University of Utah and am currently looking for a full-time opportunity
-        where I can improve my skills while contributing to a strong development team. 
-        I'm a problem solver, self-starter, and highly organized. 
-        I work well with others, adapt quickly, stay focused on finding solutions, and deliver quality work.`,
+    description: `I'm easy going and friendly, and I enjoy working with others to solve problems. In my free time, I like to tinker with technology, build projects, and explore the outdoors.`,
     aboutItems: [
         { label: "Location", text: "Sandy, Utah", Icon: MapIcon },
         { label: "Nationality", text: "American", Icon: FlagIcon },
@@ -119,7 +116,7 @@ export const aboutData: About = {
             Icon: SparklesIcon,
         },
         {
-            label: "Studying at",
+            label: "Studied at",
             text: "University of Utah",
             Icon: AcademicCapIcon,
         },
@@ -131,15 +128,15 @@ export const aboutData: About = {
  */
 export const education: TimelineItem[] = [
     {
-        date: "September 2020 - December 2025 (Expected, 1 elective class remaining)",
+        date: "September 2020 - December 2025",
         location: "University of Utah",
         title: "Bachelor's in Computer Science",
         content: (
             <p>
-                U of U has been great for teaching a broad understanding of
-                computers, not just how to code. I learned things like
-                networking, compilers, interpreters, algorithms, memory
-                allocation, boolean logic, and advanced math.
+                U of U helped me build a strong foundation in software
+                development, data structures, algorithms, and systems. I also
+                strengthened my communication and teamwork through group
+                projects and technical writing.
             </p>
         ),
     },
@@ -149,10 +146,10 @@ export const education: TimelineItem[] = [
         title: "Associate's in Information Systems",
         content: (
             <p>
-                SLCC was great for getting the majority of my generals completed
-                and learning basic programming skills like how loops work,
-                binary numbering, floating point values, data structures, and
-                basic web development.
+                SLCC was great for focusing on practical IT skills like web
+                development, networking, and database fundamentals. The program
+                gave me hands-on experience and a solid baseline for advanced
+                coursework later on.
             </p>
         ),
     },
