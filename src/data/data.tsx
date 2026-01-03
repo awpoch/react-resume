@@ -106,7 +106,10 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
     profileImageSrc: profilePic,
-    description: `I'm easy going and friendly, and I enjoy working with others to solve problems. In my free time, I like to tinker with technology, build projects, and explore the outdoors.`,
+    description:
+        `I'm easy going and friendly, and I enjoy working with others ` +
+        `to solve problems. In my free time, I like to tinker with ` +
+        `technology, build projects, and explore the outdoors.`,
     aboutItems: [
         { label: "Location", text: "Sandy, Utah", Icon: MapIcon },
         { label: "Nationality", text: "American", Icon: FlagIcon },
