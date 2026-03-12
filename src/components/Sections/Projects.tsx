@@ -6,7 +6,7 @@ import {
 } from "@heroicons/react/24/outline";
 import { motion, AnimatePresence } from "framer-motion";
 import { isApple, isMobile } from "../../config";
-import { portfolioItems, SectionId, testimonial } from "../../data/data";
+import { portfolioItems, portfolioInitialCount, SectionId, testimonial } from "../../data/data";
 import { ProjectItem } from "../../data/types";
 import Section from "../Layout/Section";
 
@@ -62,9 +62,15 @@ const scrollToItem = (index: number) => {
 
 const Projects: FC = memo(() => {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
+    const [showAll, setShowAll] = useState(false);
     const [scrollDirection, setScrollDirection] = useState<"up" | "down">(
         "down"
     );
+
+    const visibleItems = showAll
+        ? portfolioItems
+        : portfolioItems.slice(0, portfolioInitialCount);
+    const hasMore = portfolioItems.length > portfolioInitialCount;
 
     const { imageSrc } = testimonial;
     const [parallaxEnabled, setParallaxEnabled] = useState(false);
@@ -100,7 +106,7 @@ const Projects: FC = memo(() => {
                 </div>
 
                 <div className="mt-8 flex flex-col gap-6">
-                    {portfolioItems.map((item, index) => (
+                    {visibleItems.map((item, index) => (
                         <motion.div key={index} className="last:mb-0">
                             <ExpandableItem
                                 item={item}
@@ -126,6 +132,28 @@ const Projects: FC = memo(() => {
                         </motion.div>
                     ))}
                 </div>
+
+                {hasMore && (
+                    <div className="mt-6 flex justify-center">
+                        <button
+                            onClick={() => {
+                                if (showAll) {
+                                    setOpenIndex(null);
+                                }
+                                setShowAll(prev => !prev);
+                            }}
+                            className="inline-flex items-center gap-x-2 rounded-full border border-white/20 bg-white/5 px-6 py-2 text-sm font-medium text-neutral-200 transition-colors hover:bg-white/10 hover:text-white"
+                        >
+                            {showAll ? 'View less' : 'View more'}
+                            <ChevronDownIcon
+                                className={classNames(
+                                    'h-4 w-4 transition-transform duration-300',
+                                    showAll && 'rotate-180'
+                                )}
+                            />
+                        </button>
+                    </div>
+                )}
             </div>
         </Section>
     );
@@ -141,7 +169,7 @@ const ExpandableItem: FC<{
     index: number;
     scrollDirection: "up" | "down";
 }> = ({ item, isOpen, onClick, index }) => {
-    const { title, description, url, image } = item;
+    const { title, description, url, urlLabel = 'View project', image } = item;
 
     return (
         <motion.div
@@ -162,7 +190,7 @@ const ExpandableItem: FC<{
                 className={classNames(
                     "relative w-full cursor-pointer gap-4 px-5 py-4 sm:px-6 sm:py-5",
                     isOpen
-                        ? "grid grid-cols-1 sm:grid-cols-[auto,1fr] sm:auto-rows-min"
+                        ? "grid grid-cols-1 md:grid-cols-[auto,1fr] md:auto-rows-min"
                         : "grid grid-cols-[auto,1fr] items-center"
                 )}
             >
@@ -170,7 +198,7 @@ const ExpandableItem: FC<{
                 <div
                     className={classNames(
                         isOpen
-                            ? "order-1 sm:order-2 w-full text-center sm:text-left"
+                            ? "order-1 md:order-2 w-full text-center md:text-left"
                             : "order-2"
                     )}
                 >
@@ -190,7 +218,7 @@ const ExpandableItem: FC<{
 					className={classNames(
 						"relative flex justify-start rounded-xl bg-black/20 p-2",
 						isOpen
-							? "order-2 sm:order-1 w-full max-w-[90vw] sm:w-[320px] sm:row-span-2"
+							? "order-2 md:order-1 w-full max-w-[90vw] md:w-[320px] md:row-span-2"
                             : "order-1 w-[6rem] h-[6rem] shrink-0"
                     )}
                 >
@@ -239,7 +267,7 @@ const ExpandableItem: FC<{
                                         duration: textAnimationSpeedS,
                                         ease: animationEasings.easeInOut,
                                     }}
-                                    className="w-full flex flex-col gap-y-3 text-neutral-200 items-center text-center sm:items-start sm:text-left"
+                                    className="w-full flex flex-col gap-y-3 text-neutral-200 items-center text-center md:items-start md:text-left"
                                 >
                                     {description && (
                                         <p className="text-body w-full">
@@ -247,15 +275,15 @@ const ExpandableItem: FC<{
                                         </p>
                                     )}
                                     {url && (
-                                        <div className="w-full">
+                                        <div className="w-full pt-4">
                                             <a
                                                 href={url}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="inline-flex items-center gap-x-1 text-emerald-300 transition-colors hover:text-emerald-200"
+                                                className="inline-flex items-center gap-x-1.5 text-base text-emerald-300 transition-colors hover:text-emerald-200"
                                             >
-                                                View project
-                                                <ArrowTopRightOnSquareIcon className="h-4 w-4" />
+                                                {urlLabel}
+                                                <ArrowTopRightOnSquareIcon className="h-5 w-5" />
                                             </a>
                                         </div>
                                     )}

@@ -1,5 +1,5 @@
 import { StaticImageData } from "next/image";
-import { FC, ForwardRefExoticComponent, JSX, SVGProps } from "react";
+import React, { FC, ForwardRefExoticComponent, JSX, SVGProps } from "react";
 
 import { IconProps } from "../components/Icon/Icon";
 
@@ -83,8 +83,9 @@ export interface Stat {
  */
 export interface ProjectItem {
     title: string;
-    description: string;
+    description: string | React.ReactNode;
     url: string | undefined;
+    urlLabel?: string;
     image: string | StaticImageData;
 }
 
