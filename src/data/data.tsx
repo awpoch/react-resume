@@ -10,6 +10,7 @@ import GithubIcon from "../components/Icon/GithubIcon";
 import LinkedInIcon from "../components/Icon/LinkedInIcon";
 import background from "../images/circuitBoard.jpg";
 import heroImage from "../images/Delicate.jpg";
+import ledController from "../images/portfolio/controller-1.png";
 import automatedAutoCare from "../images/portfolio/AutomatedAutoCare.gif";
 import drawingApp from "../images/portfolio/DrawingApp.gif";
 import electronicsLab from "../images/portfolio/ElectronicsLab.jpg";
@@ -258,7 +259,7 @@ export const portfolioItems: ProjectItem[] = [
 		),
 		url: "https://www.lumawave-rf.com/",
 		urlLabel: "View webstore",
-		image: electronicsLab,
+		image: ledController,
 	},
 	{
 		title: "Home Office + Electronics Lab",
