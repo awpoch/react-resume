@@ -76,7 +76,9 @@ export const heroData: Hero = {
                 <strong className="text-stone-100">Bachelor's Degree</strong>
                 {` in `}
                 <strong className="text-stone-100">Computer Science</strong>
-                {`. Keeping my eyes open for an `}
+                {` and started a business `}
+                <strong className="text-stone-100">LumaWave RF</strong>
+                {`. I'm keeping my eyes open for an `}
                 <strong className="text-stone-100">awesome</strong>
                 {` place to work.`}
             </p>
@@ -110,7 +112,7 @@ export const aboutData: About = {
     description:
         `I'm easy going and friendly, and I enjoy working with others ` +
         `to solve problems. In my free time, I like to tinker with ` +
-        `technology, build projects, and explore the outdoors.`,
+        `technology, work on projects, and explore the outdoors.`,
     aboutItems: [
         { label: "Location", text: "Sandy, Utah", Icon: MapIcon },
         { label: "Nationality", text: "American", Icon: FlagIcon },
@@ -163,31 +165,40 @@ export const education: TimelineItem[] = [
  * Work
  */
 export const experience: TimelineItem[] = [
-    {
-        date: "May 2024 - December 2024",
-        location: "Sorenson Communications",
-        title: "Network Operations Center Intern",
-        content: (
-            <p>
-                Sorenson provides video to telephone interpretive services for
-                the deaf. I monitored and maintained their on-prem/cloud
-                infrastructure, tested their apps and services, and facilitated
-                incident management.
-            </p>
-        ),
-    },
-    {
-        date: "July 2016 - March 2018",
-        location: "Romac Services",
-        title: "Team Member, then Crew Chief",
-        content: (
-            <p>
-                Romac performed multiple tasks for local businesses. I directed
-                a team of associates fixing various mechanical and industrial
-                equipment.
-            </p>
-        ),
-    },
+	{
+		date: "January 2026 - Current",
+		location: "LumaWave RF",
+		title: "Founder, Product Engineer, and Developer",
+		content: (
+			<p>
+				Started a business selling WiFi-enabled LED lighting controllers for aquariums and vivariums. I designed
+				a custom PCB, wrote the embedded firmware, built a browser-based control interface, and developed a full
+				webstore with payments, shipping, and automated emails.
+			</p>
+		),
+	},
+	{
+		date: "May 2024 - December 2024",
+		location: "Sorenson Communications",
+		title: "Network Operations Center Intern",
+		content: (
+			<p>
+				Sorenson provides video to telephone interpretive services for the deaf. I monitored and maintained
+				their on-prem/cloud infrastructure, tested their apps and services, and facilitated incident management.
+			</p>
+		),
+	},
+	{
+		date: "July 2016 - March 2018",
+		location: "Romac Services",
+		title: "Team Member, then Crew Chief",
+		content: (
+			<p>
+				Romac performed multiple tasks for local businesses. I directed a team of associates fixing various
+				mechanical and industrial equipment.
+			</p>
+		),
+	},
 ];
 
 /**
@@ -253,32 +264,14 @@ export const portfolioItems: ProjectItem[] = [
 				program a full day/night lighting schedule, and it will automatically simulate sunrise, sunset, and even
 				live weather effects like clouds and lightning.
 				<br />
-				<br />I also built a complete online store to sell it. It handles product listings, payments, shipping
+				<br />
+                I also built a complete online store to sell it. It handles product listings, payments, shipping
 				calculations, and automated emails.
 			</>
 		),
 		url: "https://www.lumawave-rf.com/",
 		urlLabel: "View webstore",
 		image: ledController,
-	},
-	{
-		title: "Home Office + Electronics Lab",
-		description:
-			"I built a high-performance workspace that blends a focused home office with a fully equipped electronics bench. It features a sit/stand desk, clean cable management, and a hidden PC tower alongside a soldering station, oscilloscope, and PCB tools. The space supports deep focus, repair work, and hands-on prototyping in one streamlined setup.",
-		url: undefined,
-		image: homeOffice,
-	},
-	{
-		title: "Home Lab",
-		description: `I built a home lab and I use Proxmox to run multiple virtural machines and containers. I also configured a secure network utilizing smart firewall rules, VLANs, local DNS, custom domains, and valid certificates for a fully-featured, enterprise-style lab.`,
-		url: undefined,
-		image: proxmox,
-	},
-	{
-		title: "Home Assistant",
-		description: `I built a complete smart home setup using Home Assistant, Zigbee, Z-Wave, MQTT, and Node-RED. Devices are controlled remotely using a WireGuard VPN. I’ve automated lighting, climate control, and security with custom flows. Everything runs on a locally hosted Home Assistant instance, giving me total control and privacy.`,
-		url: undefined,
-		image: homeAssistant,
 	},
 	{
 		title: "React Portfolio",
@@ -293,10 +286,29 @@ export const portfolioItems: ProjectItem[] = [
 		image: automatedAutoCare,
 	},
 	{
+		title: "Home Lab",
+		description: `I built a home lab and I use Proxmox to run multiple virtural machines and containers. I also configured a secure network utilizing smart firewall rules, VLANs, local DNS, custom domains, and valid certificates for a fully-featured, enterprise-style lab.`,
+		url: undefined,
+		image: proxmox,
+	},
+	{
 		title: "Tank Wars Game",
 		description: `An online multiplayer tank game developed in C# with support for both human and AI-controlled players. Players navigate a battlefield with real-time action and competitive mechanics. Built with a focus on game logic, collision detection, and multiplayer networking.`,
 		url: undefined,
 		image: tankWars,
+	},
+	{
+		title: "Home Office + Electronics Lab",
+		description:
+			"I built a high-performance workspace that blends a focused home office with a fully equipped electronics bench. It features a sit/stand desk, clean cable management, and a hidden PC tower alongside a soldering station, oscilloscope, and PCB tools. The space supports deep focus, repair work, and hands-on prototyping in one streamlined setup.",
+		url: undefined,
+		image: homeOffice,
+	},
+	{
+		title: "Home Assistant",
+		description: `I built a complete smart home setup using Home Assistant, Zigbee, Z-Wave, MQTT, and Node-RED. Devices are controlled remotely using a WireGuard VPN. I’ve automated lighting, climate control, and security with custom flows. Everything runs on a locally hosted Home Assistant instance, giving me total control and privacy.`,
+		url: undefined,
+		image: homeAssistant,
 	},
 	{
 		title: "Drawing App",

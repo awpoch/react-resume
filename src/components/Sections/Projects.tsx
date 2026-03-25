@@ -278,7 +278,6 @@ const ExpandableItem: FC<{
                                         <div className="w-full pt-4">
                                             <a
                                                 href={url}
-                                                target="_blank"
                                                 rel="noopener noreferrer"
                                                 className="inline-flex items-center gap-x-1.5 text-base text-emerald-300 transition-colors hover:text-emerald-200"
                                             >
